@@ -122,6 +122,7 @@ const authOptions = {
             },
             async authorize (credentials) {
                 if (!credentials?.email || !credentials?.password) {
+                    console.log("Missing credentials");
                     return null;
                 }
                 const user = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].user.findUnique({
@@ -130,10 +131,12 @@ const authOptions = {
                     }
                 });
                 if (!user) {
+                    console.log("User not found:", credentials.email);
                     return null;
                 }
                 const isPasswordValid = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$bcryptjs$2f$index$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["compare"])(credentials.password, user.password);
                 if (!isPasswordValid) {
+                    console.log("Invalid password for user:", credentials.email);
                     return null;
                 }
                 return {
