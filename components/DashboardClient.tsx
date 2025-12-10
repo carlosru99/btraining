@@ -9,9 +9,10 @@ type DashboardClientProps = {
   user: any
   exercises: any[]
   logs: any[]
+  isAdminView?: boolean
 }
 
-export default function DashboardClient({ user, exercises, logs }: DashboardClientProps) {
+export default function DashboardClient({ user, exercises, logs, isAdminView = false }: DashboardClientProps) {
   const [isModalOpen, setIsModalOpen] = useState(false)
 
   return (
@@ -22,20 +23,29 @@ export default function DashboardClient({ user, exercises, logs }: DashboardClie
 
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
         <div>
-          <h1 className="text-4xl font-extrabold tracking-tight heading-gradient">Dashboard</h1>
-          <p className="text-gray-500 mt-1 text-lg">Welcome back, <span className="font-semibold text-gray-700">{user.name || user.email}</span></p>
+          <h1 className="text-4xl font-extrabold tracking-tight heading-gradient">
+            {isAdminView ? `${user.name || user.email}` : 'Dashboard'}
+          </h1>
+          {!isAdminView && (
+            <p className="text-gray-500 mt-1 text-lg">Welcome back, <span className="font-semibold text-gray-700">{user.name || user.email}</span></p>
+          )}
+          {isAdminView && (
+             <p className="text-gray-500 mt-1 text-lg">Viewing user data and progress</p>
+          )}
         </div>
         <div className="flex items-center gap-4">
             <div className="glass-panel px-5 py-2.5 rounded-2xl text-sm font-medium text-gray-600 shadow-sm hidden sm:block">
             {new Date().toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}
             </div>
-            <button 
-                onClick={() => setIsModalOpen(true)}
-                className="btn-primary py-2.5 px-6 text-sm shadow-lg shadow-orange-500/20 flex items-center gap-2"
-            >
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-                Log Workout
-            </button>
+            {!isAdminView && (
+              <button 
+                  onClick={() => setIsModalOpen(true)}
+                  className="btn-primary py-2.5 px-6 text-sm shadow-lg shadow-orange-500/20 flex items-center gap-2"
+              >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                  Log Workout
+              </button>
+            )}
         </div>
       </div>
       

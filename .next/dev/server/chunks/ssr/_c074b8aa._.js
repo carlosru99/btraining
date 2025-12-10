@@ -639,7 +639,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$PersonalRecord
 ;
 ;
 ;
-function DashboardClient({ user, exercises, logs }) {
+function DashboardClient({ user, exercises, logs, isAdminView = false }) {
     const [isModalOpen, setIsModalOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "space-y-8 relative",
@@ -648,14 +648,14 @@ function DashboardClient({ user, exercises, logs }) {
                 className: "absolute top-0 right-0 -translate-y-12 translate-x-12 w-96 h-96 bg-orange-200/20 rounded-full blur-3xl mix-blend-multiply -z-10 pointer-events-none"
             }, void 0, false, {
                 fileName: "[project]/components/DashboardClient.tsx",
-                lineNumber: 20,
+                lineNumber: 21,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "absolute top-20 left-0 -translate-x-12 w-72 h-72 bg-amber-200/20 rounded-full blur-3xl mix-blend-multiply -z-10 pointer-events-none"
             }, void 0, false, {
                 fileName: "[project]/components/DashboardClient.tsx",
-                lineNumber: 21,
+                lineNumber: 22,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -665,13 +665,13 @@ function DashboardClient({ user, exercises, logs }) {
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
                                 className: "text-4xl font-extrabold tracking-tight heading-gradient",
-                                children: "Dashboard"
+                                children: isAdminView ? `${user.name || user.email}` : 'Dashboard'
                             }, void 0, false, {
                                 fileName: "[project]/components/DashboardClient.tsx",
-                                lineNumber: 25,
+                                lineNumber: 26,
                                 columnNumber: 11
                             }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                            !isAdminView && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                 className: "text-gray-500 mt-1 text-lg",
                                 children: [
                                     "Welcome back, ",
@@ -680,19 +680,27 @@ function DashboardClient({ user, exercises, logs }) {
                                         children: user.name || user.email
                                     }, void 0, false, {
                                         fileName: "[project]/components/DashboardClient.tsx",
-                                        lineNumber: 26,
-                                        columnNumber: 67
+                                        lineNumber: 30,
+                                        columnNumber: 69
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/DashboardClient.tsx",
-                                lineNumber: 26,
-                                columnNumber: 11
+                                lineNumber: 30,
+                                columnNumber: 13
+                            }, this),
+                            isAdminView && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                className: "text-gray-500 mt-1 text-lg",
+                                children: "Viewing user data and progress"
+                            }, void 0, false, {
+                                fileName: "[project]/components/DashboardClient.tsx",
+                                lineNumber: 33,
+                                columnNumber: 14
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/DashboardClient.tsx",
-                        lineNumber: 24,
+                        lineNumber: 25,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -708,10 +716,10 @@ function DashboardClient({ user, exercises, logs }) {
                                 })
                             }, void 0, false, {
                                 fileName: "[project]/components/DashboardClient.tsx",
-                                lineNumber: 29,
+                                lineNumber: 37,
                                 columnNumber: 13
                             }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                            !isAdminView && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                 onClick: ()=>setIsModalOpen(true),
                                 className: "btn-primary py-2.5 px-6 text-sm shadow-lg shadow-orange-500/20 flex items-center gap-2",
                                 children: [
@@ -733,8 +741,8 @@ function DashboardClient({ user, exercises, logs }) {
                                                 y2: "19"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/DashboardClient.tsx",
-                                                lineNumber: 36,
-                                                columnNumber: 195
+                                                lineNumber: 45,
+                                                columnNumber: 197
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
                                                 x1: "5",
@@ -743,32 +751,32 @@ function DashboardClient({ user, exercises, logs }) {
                                                 y2: "12"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/DashboardClient.tsx",
-                                                lineNumber: 36,
-                                                columnNumber: 239
+                                                lineNumber: 45,
+                                                columnNumber: 241
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/DashboardClient.tsx",
-                                        lineNumber: 36,
-                                        columnNumber: 17
+                                        lineNumber: 45,
+                                        columnNumber: 19
                                     }, this),
                                     "Log Workout"
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/DashboardClient.tsx",
-                                lineNumber: 32,
-                                columnNumber: 13
+                                lineNumber: 41,
+                                columnNumber: 15
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/DashboardClient.tsx",
-                        lineNumber: 28,
+                        lineNumber: 36,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/DashboardClient.tsx",
-                lineNumber: 23,
+                lineNumber: 24,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -781,7 +789,7 @@ function DashboardClient({ user, exercises, logs }) {
                                 logs: logs
                             }, void 0, false, {
                                 fileName: "[project]/components/DashboardClient.tsx",
-                                lineNumber: 44,
+                                lineNumber: 54,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -795,7 +803,7 @@ function DashboardClient({ user, exercises, logs }) {
                                                 children: "Recent Activity"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/DashboardClient.tsx",
-                                                lineNumber: 48,
+                                                lineNumber: 58,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -803,13 +811,13 @@ function DashboardClient({ user, exercises, logs }) {
                                                 children: "Last 100 Logs"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/DashboardClient.tsx",
-                                                lineNumber: 49,
+                                                lineNumber: 59,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/DashboardClient.tsx",
-                                        lineNumber: 47,
+                                        lineNumber: 57,
                                         columnNumber: 15
                                     }, this),
                                     logs.length === 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -820,7 +828,7 @@ function DashboardClient({ user, exercises, logs }) {
                                                 children: "No workouts logged yet."
                                             }, void 0, false, {
                                                 fileName: "[project]/components/DashboardClient.tsx",
-                                                lineNumber: 54,
+                                                lineNumber: 64,
                                                 columnNumber: 23
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -828,13 +836,13 @@ function DashboardClient({ user, exercises, logs }) {
                                                 children: "Start by logging your first set!"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/DashboardClient.tsx",
-                                                lineNumber: 55,
+                                                lineNumber: 65,
                                                 columnNumber: 23
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/DashboardClient.tsx",
-                                        lineNumber: 53,
+                                        lineNumber: 63,
                                         columnNumber: 19
                                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "overflow-x-auto",
@@ -850,7 +858,7 @@ function DashboardClient({ user, exercises, logs }) {
                                                                 children: "Date"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/DashboardClient.tsx",
-                                                                lineNumber: 62,
+                                                                lineNumber: 72,
                                                                 columnNumber: 35
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -858,7 +866,7 @@ function DashboardClient({ user, exercises, logs }) {
                                                                 children: "Exercise"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/DashboardClient.tsx",
-                                                                lineNumber: 63,
+                                                                lineNumber: 73,
                                                                 columnNumber: 35
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -866,7 +874,7 @@ function DashboardClient({ user, exercises, logs }) {
                                                                 children: "Weight"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/DashboardClient.tsx",
-                                                                lineNumber: 64,
+                                                                lineNumber: 74,
                                                                 columnNumber: 35
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -874,7 +882,7 @@ function DashboardClient({ user, exercises, logs }) {
                                                                 children: "Reps"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/DashboardClient.tsx",
-                                                                lineNumber: 65,
+                                                                lineNumber: 75,
                                                                 columnNumber: 35
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -882,18 +890,18 @@ function DashboardClient({ user, exercises, logs }) {
                                                                 children: "Sets"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/DashboardClient.tsx",
-                                                                lineNumber: 66,
+                                                                lineNumber: 76,
                                                                 columnNumber: 35
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/DashboardClient.tsx",
-                                                        lineNumber: 61,
+                                                        lineNumber: 71,
                                                         columnNumber: 31
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/DashboardClient.tsx",
-                                                    lineNumber: 60,
+                                                    lineNumber: 70,
                                                     columnNumber: 27
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("tbody", {
@@ -906,7 +914,7 @@ function DashboardClient({ user, exercises, logs }) {
                                                                     children: new Date(log.date).toLocaleDateString()
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/components/DashboardClient.tsx",
-                                                                    lineNumber: 72,
+                                                                    lineNumber: 82,
                                                                     columnNumber: 39
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -914,7 +922,7 @@ function DashboardClient({ user, exercises, logs }) {
                                                                     children: log.exercise.name
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/components/DashboardClient.tsx",
-                                                                    lineNumber: 73,
+                                                                    lineNumber: 83,
                                                                     columnNumber: 39
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -927,13 +935,13 @@ function DashboardClient({ user, exercises, logs }) {
                                                                             children: "kg"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/components/DashboardClient.tsx",
-                                                                            lineNumber: 74,
+                                                                            lineNumber: 84,
                                                                             columnNumber: 99
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/components/DashboardClient.tsx",
-                                                                    lineNumber: 74,
+                                                                    lineNumber: 84,
                                                                     columnNumber: 39
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -941,7 +949,7 @@ function DashboardClient({ user, exercises, logs }) {
                                                                     children: log.reps
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/components/DashboardClient.tsx",
-                                                                    lineNumber: 75,
+                                                                    lineNumber: 85,
                                                                     columnNumber: 39
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -949,41 +957,41 @@ function DashboardClient({ user, exercises, logs }) {
                                                                     children: log.sets
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/components/DashboardClient.tsx",
-                                                                    lineNumber: 76,
+                                                                    lineNumber: 86,
                                                                     columnNumber: 39
                                                                 }, this)
                                                             ]
                                                         }, log.id, true, {
                                                             fileName: "[project]/components/DashboardClient.tsx",
-                                                            lineNumber: 71,
+                                                            lineNumber: 81,
                                                             columnNumber: 35
                                                         }, this))
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/DashboardClient.tsx",
-                                                    lineNumber: 69,
+                                                    lineNumber: 79,
                                                     columnNumber: 27
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/DashboardClient.tsx",
-                                            lineNumber: 59,
+                                            lineNumber: 69,
                                             columnNumber: 23
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/DashboardClient.tsx",
-                                        lineNumber: 58,
+                                        lineNumber: 68,
                                         columnNumber: 19
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/DashboardClient.tsx",
-                                lineNumber: 46,
+                                lineNumber: 56,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/DashboardClient.tsx",
-                        lineNumber: 43,
+                        lineNumber: 53,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -993,7 +1001,7 @@ function DashboardClient({ user, exercises, logs }) {
                                 logs: logs
                             }, void 0, false, {
                                 fileName: "[project]/components/DashboardClient.tsx",
-                                lineNumber: 87,
+                                lineNumber: 97,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1004,7 +1012,7 @@ function DashboardClient({ user, exercises, logs }) {
                                         children: "Quick Stats"
                                     }, void 0, false, {
                                         fileName: "[project]/components/DashboardClient.tsx",
-                                        lineNumber: 91,
+                                        lineNumber: 101,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1018,7 +1026,7 @@ function DashboardClient({ user, exercises, logs }) {
                                                         children: "Total Workouts"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/DashboardClient.tsx",
-                                                        lineNumber: 94,
+                                                        lineNumber: 104,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1026,13 +1034,13 @@ function DashboardClient({ user, exercises, logs }) {
                                                         children: logs.length
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/DashboardClient.tsx",
-                                                        lineNumber: 95,
+                                                        lineNumber: 105,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/DashboardClient.tsx",
-                                                lineNumber: 93,
+                                                lineNumber: 103,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1043,7 +1051,7 @@ function DashboardClient({ user, exercises, logs }) {
                                                         children: "Exercises"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/DashboardClient.tsx",
-                                                        lineNumber: 98,
+                                                        lineNumber: 108,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1051,37 +1059,37 @@ function DashboardClient({ user, exercises, logs }) {
                                                         children: exercises.length
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/DashboardClient.tsx",
-                                                        lineNumber: 99,
+                                                        lineNumber: 109,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/DashboardClient.tsx",
-                                                lineNumber: 97,
+                                                lineNumber: 107,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/DashboardClient.tsx",
-                                        lineNumber: 92,
+                                        lineNumber: 102,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/DashboardClient.tsx",
-                                lineNumber: 90,
+                                lineNumber: 100,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/DashboardClient.tsx",
-                        lineNumber: 86,
+                        lineNumber: 96,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/DashboardClient.tsx",
-                lineNumber: 42,
+                lineNumber: 52,
                 columnNumber: 7
             }, this),
             isModalOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1110,7 +1118,7 @@ function DashboardClient({ user, exercises, logs }) {
                                         y2: "18"
                                     }, void 0, false, {
                                         fileName: "[project]/components/DashboardClient.tsx",
-                                        lineNumber: 114,
+                                        lineNumber: 124,
                                         columnNumber: 199
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
@@ -1120,18 +1128,18 @@ function DashboardClient({ user, exercises, logs }) {
                                         y2: "18"
                                     }, void 0, false, {
                                         fileName: "[project]/components/DashboardClient.tsx",
-                                        lineNumber: 114,
+                                        lineNumber: 124,
                                         columnNumber: 242
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/DashboardClient.tsx",
-                                lineNumber: 114,
+                                lineNumber: 124,
                                 columnNumber: 21
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/components/DashboardClient.tsx",
-                            lineNumber: 110,
+                            lineNumber: 120,
                             columnNumber: 17
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$LogExerciseForm$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -1139,24 +1147,24 @@ function DashboardClient({ user, exercises, logs }) {
                             onSuccess: ()=>setIsModalOpen(false)
                         }, void 0, false, {
                             fileName: "[project]/components/DashboardClient.tsx",
-                            lineNumber: 116,
+                            lineNumber: 126,
                             columnNumber: 17
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/DashboardClient.tsx",
-                    lineNumber: 109,
+                    lineNumber: 119,
                     columnNumber: 13
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/DashboardClient.tsx",
-                lineNumber: 108,
+                lineNumber: 118,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/DashboardClient.tsx",
-        lineNumber: 18,
+        lineNumber: 19,
         columnNumber: 5
     }, this);
 }
