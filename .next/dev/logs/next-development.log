@@ -1,5 +1,4 @@
-[00:00:01.615] Server  LOG      ✓ Ready in 1420ms
-[00:00:05.646] Server  WARN    [next-auth][warn][NEXTAUTH_URL] "\nhttps://next-auth.js.org/warnings#nextauth_url"
-[00:00:05.646] Server  WARN    [next-auth][warn][NO_SECRET] "\nhttps://next-auth.js.org/warnings#no_secret"
-[00:00:06.483] Server  WARN    [next-auth][warn][NEXTAUTH_URL] "\nhttps://next-auth.js.org/warnings#nextauth_url"
-[00:00:06.483] Server  WARN    [next-auth][warn][NO_SECRET] "\nhttps://next-auth.js.org/warnings#no_secret"
+[00:00:00.572] Server  LOG      ✓ Ready in 399ms
+[00:00:14.073] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:04:50.422] Server  LOG        Reload env: .env
+[00:05:03.385] Server  LOG        Reload env: .env

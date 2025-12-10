@@ -1,66 +1,80 @@
-# Gym AppThis is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# BTraining Web App
 
+## Deployment
 
+### Quick Start (Server)
 
-## Setup## Getting Started
-
-
-
-1.  **Start Database**:First, run the development server:
-
-    ```bash
-
-    docker-compose up -d```bash
-
-    ```npm run dev
-
-# or
-
-2.  **Install Dependencies**:yarn dev
-
-    ```bash# or
-
-    npm installpnpm dev
-
-    ```# or
-
-bun dev
-
-3.  **Setup Database Schema**:```
+1.  **Connect to your server** via SSH.
+2.  **Create a setup script** and run it to install dependencies (Docker, Git) and deploy the app.
 
     ```bash
-
-    npx prisma migrate dev --name initOpen [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
+    # Create the script
+    nano setup.sh
+    # (Paste the content of server-setup.sh here)
+    
+    # Run it
+    chmod +x setup.sh
+    ./setup.sh
     ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Manual Deployment
 
-4.  **Run Development Server**:
+1.  **Clone the repository**:
+    ```bash
+    git clone https://github.com/carlosru99/btraining.git btraining-web
+    cd btraining-web
+    ```
 
-    ```bashThis project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2.  **Configure Environment**:
+    ```bash
+    cp .env.example .env
+    nano .env
+    ```
+    Update `POSTGRES_PASSWORD`, `NEXTAUTH_SECRET`, and `ADMIN_PASSWORD` with secure values.
 
-    npm run dev
+3.  **Deploy**:
+    ```bash
+    chmod +x deploy.sh
+    ./deploy.sh
+    ```
 
-    ```## Learn More
+## Database Management
 
+### Admin User
+The default admin user created by the seed script is:
+*   **Email:** `admin@gym.com`
+*   **Password:** The value of `ADMIN_PASSWORD` in your `.env` file (default: `admin123` or `jhHksjoe78!`).
 
+### Daily Backups
 
-## FeaturesTo learn more about Next.js, take a look at the following resources:
+The project includes a `backup.sh` script to automate daily database backups.
 
-- User Authentication (NextAuth)
+#### 1. Configuration
+Ensure the `backup.sh` script has the correct container name (check with `docker ps`).
+```bash
+CONTAINER_NAME="btraining-web-postgres-1"
+```
 
-- Dashboard- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+#### 2. Manual Backup
+Run the script to create an immediate backup in the `./backups` directory:
+```bash
+./backup.sh
+```
 
-- Exercise Tracking- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+#### 3. Automated Daily Backups (Cron)
+To run the backup automatically every day at 3:00 AM:
 
-- Responsive Design (Tailwind CSS)
+1.  Open the crontab editor:
+    ```bash
+    crontab -e
+    ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2.  Add the following line (adjust the path to your project):
+    ```cron
+    0 3 * * * /home/ubuntu/btraining-web/backup.sh >> /home/ubuntu/btraining-web/backup.log 2>&1
+    ```
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# btraining
+This setup will:
+*   Dump the database daily.
+*   Compress it to save space.
+*   Automatically delete backups older than 7 days.
