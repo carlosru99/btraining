@@ -1,27 +1,45 @@
 #!/bin/bash
 
-# Ensure .env exists
+# Exit on error
+set -e
+
+echo "🚀 Starting Deployment..."
+
+# 1. Pull latest changes
+echo "📥 Pulling latest code..."
+git pull
+
+# 2. Ensure .env exists
 if [ ! -f .env ]; then
+  echo "⚠️  .env file not found!"
   echo "Creating .env from .env.example..."
   cp .env.example .env
-  echo "Please edit .env with your production values."
+  echo "Please edit .env with your production values and run this script again."
   exit 1
 fi
 
-# Build and start containers
-echo "Starting services..."
+# 3. Build and start containers
+echo "🏗️  Building and starting services..."
 docker compose up -d --build
 
-# Wait for postgres to be ready
-echo "Waiting for database..."
+# 4. Wait for postgres to be ready
+echo "⏳ Waiting for database to be ready..."
 sleep 10
 
-# Run migrations
-echo "Running migrations..."
-docker compose exec app npx prisma@5.22.0 migrate deploy
+# 5. Setup Database
+echo "🗄️  Setting up database..."
 
-# Seed database (optional, uncomment if needed)
-# echo "Seeding database..."
-# docker compose exec app npx prisma@5.22.0 db seed
+# Try to run migrations
+if docker compose exec app npx prisma@5.22.0 migrate deploy; then
+    echo "✅ Migrations applied successfully."
+else
+    echo "⚠️  Migration failed. Attempting 'db push' to sync schema..."
+    docker compose exec app npx prisma@5.22.0 db push
+fi
 
-echo "Deployment complete! App should be running at the configured NEXTAUTH_URL."
+# 6. Seed Database
+echo "🌱 Seeding database..."
+docker compose exec app npx prisma@5.22.0 db seed
+
+echo "✅ Deployment complete! App is running."
+
