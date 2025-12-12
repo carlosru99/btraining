@@ -21,6 +21,8 @@ model User {
   password      String
   image         String?
   role          String        @default("USER")
+  resetToken    String?
+  resetTokenExpiry DateTime?
   createdAt     DateTime      @default(now())
   updatedAt     DateTime      @updatedAt
   logs          ExerciseLog[]

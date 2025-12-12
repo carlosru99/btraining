@@ -6,6 +6,8 @@ import { getServerSession } from "next-auth"
 import { redirect } from "next/navigation"
 import { hash } from "bcryptjs"
 import { authOptions } from "@/lib/auth"
+import { randomBytes } from "crypto"
+import { sendPasswordResetEmail } from "@/lib/mail"
 
 export async function createExercise(formData: FormData) {
   const name = formData.get("name") as string
@@ -124,4 +126,68 @@ export async function deleteExercise(exerciseId: string) {
 
   revalidatePath("/admin")
   revalidatePath("/exercises")
+}
+
+export async function forgotPassword(formData: FormData) {
+  const email = formData.get("email") as string
+
+  if (!email) return { error: "Email is required" }
+
+  const user = await prisma.user.findUnique({
+    where: { email }
+  })
+
+  if (!user) {
+    // Do not reveal if user exists
+    return { success: true, message: "If an account exists with this email, you will receive a password reset link." }
+  }
+
+  const token = randomBytes(32).toString("hex")
+  const expiry = new Date(Date.now() + 3600000) // 1 hour from now
+
+  await prisma.user.update({
+    where: { email },
+    data: {
+      resetToken: token,
+      resetTokenExpiry: expiry
+    }
+  })
+
+  await sendPasswordResetEmail(email, token, user.name || 'User')
+
+  return { success: true, message: "If an account exists with this email, you will receive a password reset link." }
+}
+
+export async function resetPassword(token: string, formData: FormData) {
+  const password = formData.get("password") as string
+  const confirmPassword = formData.get("confirmPassword") as string
+
+  if (!password || !confirmPassword) return { error: "All fields are required" }
+  if (password !== confirmPassword) return { error: "Passwords do not match" }
+
+  const user = await prisma.user.findFirst({
+    where: {
+      resetToken: token,
+      resetTokenExpiry: {
+        gt: new Date()
+      }
+    }
+  })
+
+  if (!user) {
+    return { error: "Invalid or expired token" }
+  }
+
+  const hashedPassword = await hash(password, 10)
+
+  await prisma.user.update({
+    where: { id: user.id },
+    data: {
+      password: hashedPassword,
+      resetToken: null,
+      resetTokenExpiry: null
+    }
+  })
+
+  redirect("/login?reset=success")
 }

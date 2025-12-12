@@ -163,7 +163,7 @@ const authOptions = {
 "[project]/app/actions.ts [app-rsc] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
-/* __next_internal_action_entry_do_not_use__ [{"400a527dcd9e99eed559937b64e6c7ef22f25f835e":"registerUser","40387d51a13a1e1c81b3d74b24866c40d82ef20b7b":"deleteUser","4077223ef7afc9ff3e9ffec7215ffe1660d586d93e":"deleteExercise","40a24868c2032a29c9c84576faa9da51c68754acf8":"logExercise","40fc0af534ce0031b04a5fa661ffcff2b9382f81a6":"createExercise"},"",""] */ __turbopack_context__.s([
+/* __next_internal_action_entry_do_not_use__ [{"40268f3403ef9a69731096758dd1a0b9aa67bb04ec":"createExercise","403d9de420842246c2d54af95e5d7e9cffe0923fa5":"registerUser","406849b0bde4751ef6148b833efa24a9ed3eb78275":"deleteExercise","408897ea7a0b8912ec7d0cb55c9f980527fddccca9":"logExercise","40fe90a2056c4f2ba0b627bd60286f1d37da30be2e":"deleteUser"},"",""] */ __turbopack_context__.s([
     "createExercise",
     ()=>createExercise,
     "deleteExercise",
@@ -314,11 +314,11 @@ async function deleteExercise(exerciseId) {
     deleteUser,
     deleteExercise
 ]);
-(0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])(createExercise, "40fc0af534ce0031b04a5fa661ffcff2b9382f81a6", null);
-(0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])(logExercise, "40a24868c2032a29c9c84576faa9da51c68754acf8", null);
-(0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])(registerUser, "400a527dcd9e99eed559937b64e6c7ef22f25f835e", null);
-(0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])(deleteUser, "40387d51a13a1e1c81b3d74b24866c40d82ef20b7b", null);
-(0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])(deleteExercise, "4077223ef7afc9ff3e9ffec7215ffe1660d586d93e", null);
+(0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])(createExercise, "40268f3403ef9a69731096758dd1a0b9aa67bb04ec", null);
+(0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])(logExercise, "408897ea7a0b8912ec7d0cb55c9f980527fddccca9", null);
+(0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])(registerUser, "403d9de420842246c2d54af95e5d7e9cffe0923fa5", null);
+(0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])(deleteUser, "40fe90a2056c4f2ba0b627bd60286f1d37da30be2e", null);
+(0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])(deleteExercise, "406849b0bde4751ef6148b833efa24a9ed3eb78275", null);
 }),
 "[project]/.next-internal/server/app/dashboard/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript) <locals>", ((__turbopack_context__) => {
 "use strict";
@@ -331,7 +331,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$actions$2e$ts__$5b$ap
 "use strict";
 
 __turbopack_context__.s([
-    "40a24868c2032a29c9c84576faa9da51c68754acf8",
+    "408897ea7a0b8912ec7d0cb55c9f980527fddccca9",
     ()=>__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$actions$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["logExercise"]
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f2e$next$2d$internal$2f$server$2f$app$2f$dashboard$2f$page$2f$actions$2e$js__$7b$__ACTIONS_MODULE0__$3d3e$__$225b$project$5d2f$app$2f$actions$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$2922$__$7d$__$5b$app$2d$rsc$5d$__$28$server__actions__loader$2c$__ecmascript$29$__$3c$locals$3e$__ = __turbopack_context__.i('[project]/.next-internal/server/app/dashboard/page/actions.js { ACTIONS_MODULE0 => "[project]/app/actions.ts [app-rsc] (ecmascript)" } [app-rsc] (server actions loader, ecmascript) <locals>');
