@@ -43,6 +43,8 @@ model ExerciseLog {
   weight     Float
   reps       Int
   sets       Int
+  rpe        Int?
+  estimated1RM Float?
   date       DateTime @default(now())
   user       User     @relation(fields: [userId], references: [id])
   userId     String

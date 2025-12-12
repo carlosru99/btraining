@@ -49,9 +49,13 @@ export async function logExercise(formData: FormData) {
   const weight = parseFloat(formData.get("weight") as string)
   const reps = parseInt(formData.get("reps") as string)
   const sets = parseInt(formData.get("sets") as string)
+  const rpe = formData.get("rpe") ? parseInt(formData.get("rpe") as string) : null
   const date = new Date(formData.get("date") as string || Date.now())
 
   if (!exerciseId || isNaN(weight) || isNaN(reps) || isNaN(sets)) return
+
+  // Calculate Estimated 1RM using Epley Formula: Weight * (1 + Reps/30)
+  const estimated1RM = weight * (1 + reps / 30)
 
   await prisma.exerciseLog.create({
     data: {
@@ -60,6 +64,8 @@ export async function logExercise(formData: FormData) {
       weight,
       reps,
       sets,
+      rpe,
+      estimated1RM,
       date,
     },
   })

@@ -74,6 +74,7 @@ export default function DashboardClient({ user, exercises, logs, isAdminView = f
                                   <th className="pb-4 font-semibold">Weight</th>
                                   <th className="pb-4 font-semibold">Reps</th>
                                   <th className="pb-4 font-semibold">Sets</th>
+                                  <th className="pb-4 font-semibold">Est. 1RM</th>
                               </tr>
                           </thead>
                           <tbody className="divide-y divide-gray-50">
@@ -84,6 +85,15 @@ export default function DashboardClient({ user, exercises, logs, isAdminView = f
                                       <td className="py-4 text-gray-600 font-medium">{log.weight} <span className="text-xs text-gray-400 font-normal">kg</span></td>
                                       <td className="py-4 text-gray-600 font-medium">{log.reps}</td>
                                       <td className="py-4 text-gray-600 font-medium">{log.sets}</td>
+                                      <td className="py-4 text-gray-600 font-medium">
+                                        {log.estimated1RM ? (
+                                          <span className="bg-amber-100 text-amber-700 px-2 py-1 rounded-md text-xs font-bold">
+                                            {Math.round(log.estimated1RM)} kg
+                                          </span>
+                                        ) : (
+                                          <span className="text-gray-300">-</span>
+                                        )}
+                                      </td>
                                   </tr>
                               ))}
                           </tbody>

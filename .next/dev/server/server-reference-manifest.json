@@ -1,7 +1,41 @@
 {
   "node": {
+    "40268f3403ef9a69731096758dd1a0b9aa67bb04ec": {
+      "workers": {
+        "app/admin/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "createExercise",
+          "filename": "app/actions.ts"
+        },
+        "app/exercises/page": {
+          "moduleId": "[project]/.next-internal/server/app/exercises/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "createExercise",
+          "filename": "app/actions.ts"
+        }
+      },
+      "layer": {
+        "app/admin/page": "rsc",
+        "app/exercises/page": "action-browser"
+      },
+      "filename": "app/actions.ts",
+      "exportedName": "createExercise"
+    },
     "408897ea7a0b8912ec7d0cb55c9f980527fddccca9": {
       "workers": {
+        "app/admin/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "logExercise",
+          "filename": "app/actions.ts"
+        },
+        "app/admin/users/[id]/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/users/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "logExercise",
+          "filename": "app/actions.ts"
+        },
         "app/dashboard/page": {
           "moduleId": "[project]/.next-internal/server/app/dashboard/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false,
@@ -10,6 +44,8 @@
         }
       },
       "layer": {
+        "app/admin/page": "rsc",
+        "app/admin/users/[id]/page": "action-browser",
         "app/dashboard/page": "action-browser"
       },
       "filename": "app/actions.ts",
@@ -17,18 +53,78 @@
     },
     "4007bfced1ea1ee4dc19d1d71f38500e6fabff21f0": {
       "workers": {
-        "app/forgot-password/page": {
-          "moduleId": "[project]/.next-internal/server/app/forgot-password/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+        "app/admin/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false,
           "exportedName": "forgotPassword",
           "filename": "app/actions.ts"
         }
       },
       "layer": {
-        "app/forgot-password/page": "action-browser"
+        "app/admin/page": "rsc"
       },
       "filename": "app/actions.ts",
       "exportedName": "forgotPassword"
+    },
+    "403d9de420842246c2d54af95e5d7e9cffe0923fa5": {
+      "workers": {
+        "app/admin/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "registerUser",
+          "filename": "app/actions.ts"
+        }
+      },
+      "layer": {
+        "app/admin/page": "rsc"
+      },
+      "filename": "app/actions.ts",
+      "exportedName": "registerUser"
+    },
+    "406849b0bde4751ef6148b833efa24a9ed3eb78275": {
+      "workers": {
+        "app/admin/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "deleteExercise",
+          "filename": "app/actions.ts"
+        }
+      },
+      "layer": {
+        "app/admin/page": "rsc"
+      },
+      "filename": "app/actions.ts",
+      "exportedName": "deleteExercise"
+    },
+    "40fe90a2056c4f2ba0b627bd60286f1d37da30be2e": {
+      "workers": {
+        "app/admin/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "deleteUser",
+          "filename": "app/actions.ts"
+        }
+      },
+      "layer": {
+        "app/admin/page": "rsc"
+      },
+      "filename": "app/actions.ts",
+      "exportedName": "deleteUser"
+    },
+    "60c30ffeb17f35d2bd13cb9940dbc720fd5c8bbe3e": {
+      "workers": {
+        "app/admin/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "resetPassword",
+          "filename": "app/actions.ts"
+        }
+      },
+      "layer": {
+        "app/admin/page": "rsc"
+      },
+      "filename": "app/actions.ts",
+      "exportedName": "resetPassword"
     }
   },
   "edge": {},

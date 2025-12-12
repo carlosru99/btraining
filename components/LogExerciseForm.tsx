@@ -75,6 +75,21 @@ export default function LogExerciseForm({ exercises, onSuccess }: { exercises: E
           />
         </div>
         <div>
+          <label className="block text-sm font-semibold text-gray-700 mb-2 ml-1">
+            RPE (1-10)
+            <span className="ml-1 text-xs font-normal text-gray-500" title="Rate of Perceived Exertion: 10 = Max Effort, 1 = Very Easy">ℹ️</span>
+          </label>
+          <select name="rpe" className="select-field bg-white/50 cursor-pointer hover:bg-white transition-colors">
+            <option value="">Select RPE...</option>
+            <option value="10">10 - Max Effort (0 reps left)</option>
+            <option value="9">9 - Very Hard (1 rep left)</option>
+            <option value="8">8 - Hard (2 reps left)</option>
+            <option value="7">7 - Moderate (3 reps left)</option>
+            <option value="6">6 - Easy</option>
+            <option value="5">5 - Very Easy</option>
+          </select>
+        </div>
+        <div>
           <label className="block text-sm font-semibold text-gray-700 mb-2 ml-1">Date</label>
           <input
             name="date"
