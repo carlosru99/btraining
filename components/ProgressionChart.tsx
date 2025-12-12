@@ -41,7 +41,7 @@ export default function ProgressionChart({ logs }: { logs: Log[] }) {
   return (
     <div className="card backdrop-blur-sm bg-white/80 h-[450px] w-full mt-6">
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-4">
-        <h3 className="text-xl font-bold text-gray-900">Progression Overview</h3>
+        <h3 className="text-xl font-bold text-gray-900">Visión General del Progreso</h3>
         <div className="flex gap-2 w-full sm:w-auto">
           <div className="flex bg-gray-100 p-1 rounded-xl">
             <button
@@ -52,7 +52,7 @@ export default function ProgressionChart({ logs }: { logs: Log[] }) {
                   : 'text-gray-500 hover:text-gray-700'
               }`}
             >
-              Weight
+              Peso
             </button>
             <button
               onClick={() => setMetric('volume')}
@@ -62,7 +62,7 @@ export default function ProgressionChart({ logs }: { logs: Log[] }) {
                   : 'text-gray-500 hover:text-gray-700'
               }`}
             >
-              Volume
+              Volumen
             </button>
           </div>
           <select 
@@ -102,7 +102,7 @@ export default function ProgressionChart({ logs }: { logs: Log[] }) {
             />
             <Legend wrapperStyle={{ paddingTop: '20px' }} />
             <Line 
-              name={metric === 'weight' ? 'Weight (kg)' : 'Volume (kg)'}
+              name={metric === 'weight' ? 'Peso (kg)' : 'Volumen (kg)'}
               type="monotone" 
               dataKey={metric} 
               stroke="#f97316" 
@@ -114,7 +114,7 @@ export default function ProgressionChart({ logs }: { logs: Log[] }) {
         </ResponsiveContainer>
       ) : (
         <div className="h-full flex items-center justify-center text-gray-400">
-          <p>No data for this exercise.</p>
+          <p>No hay datos para este ejercicio.</p>
         </div>
       )}
     </div>

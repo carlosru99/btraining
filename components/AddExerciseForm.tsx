@@ -19,11 +19,11 @@ export default function AddExerciseForm() {
             setMessage({ type: 'error', text: result.error })
           } else {
             ref.current?.reset()
-            setMessage({ type: 'success', text: "Exercise added successfully!" })
+            setMessage({ type: 'success', text: "¡Ejercicio añadido correctamente!" })
             setTimeout(() => setMessage(null), 3000)
           }
         } catch (e) {
-          setMessage({ type: 'error', text: "Something went wrong. Please try again." })
+          setMessage({ type: 'error', text: "Algo salió mal. Por favor inténtalo de nuevo." })
         } finally {
           setIsSubmitting(false)
         }
@@ -33,7 +33,7 @@ export default function AddExerciseForm() {
     >
       <h2 className="text-xl font-bold mb-6 text-gray-900 flex items-center gap-2">
         <span className="w-2 h-6 bg-orange-500 rounded-full"></span>
-        Add New Exercise
+        Añadir Nuevo Ejercicio
       </h2>
 
       {message && (
@@ -46,32 +46,32 @@ export default function AddExerciseForm() {
 
       <div className="grid grid-cols-1 gap-6">
         <div>
-          <label className="block text-sm font-semibold text-gray-700 mb-2 ml-1">Name</label>
+          <label className="block text-sm font-semibold text-gray-700 mb-2 ml-1">Nombre</label>
           <input
             name="name"
             type="text"
             required
             className="input-field"
-            placeholder="e.g. Bench Press"
+            placeholder="ej. Press de Banca"
           />
         </div>
         <div>
-          <label className="block text-sm font-semibold text-gray-700 mb-2 ml-1">Category</label>
+          <label className="block text-sm font-semibold text-gray-700 mb-2 ml-1">Categoría</label>
           <div className="relative">
             <select name="category" className="select-field bg-white/50 cursor-pointer hover:bg-white transition-colors">
-              <option value="Strength">Strength</option>
+              <option value="Strength">Fuerza</option>
               <option value="Cardio">Cardio</option>
-              <option value="Flexibility">Flexibility</option>
-              <option value="Other">Other</option>
+              <option value="Flexibility">Flexibilidad</option>
+              <option value="Other">Otro</option>
             </select>
           </div>
         </div>
         <div>
-          <label className="block text-sm font-semibold text-gray-700 mb-2 ml-1">Description</label>
+          <label className="block text-sm font-semibold text-gray-700 mb-2 ml-1">Descripción</label>
           <textarea
             name="description"
             className="input-field min-h-[100px]"
-            placeholder="Optional description..."
+            placeholder="Descripción opcional..."
           />
         </div>
         <div className="pt-2">
@@ -80,7 +80,7 @@ export default function AddExerciseForm() {
             disabled={isSubmitting}
             className="btn-primary w-full md:w-auto px-8 py-3 shadow-lg shadow-orange-500/20 disabled:opacity-70 disabled:cursor-not-allowed"
           >
-            {isSubmitting ? 'Adding...' : 'Add Exercise'}
+            {isSubmitting ? 'Añadiendo...' : 'Añadir Ejercicio'}
           </button>
         </div>
       </div>

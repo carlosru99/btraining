@@ -24,18 +24,18 @@ export default function DashboardClient({ user, exercises, logs, isAdminView = f
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
         <div>
           <h1 className="text-4xl font-extrabold tracking-tight heading-gradient">
-            {isAdminView ? `${user.name || user.email}` : 'Dashboard'}
+            {isAdminView ? `${user.name || user.email}` : 'Panel Principal'}
           </h1>
           {!isAdminView && (
-            <p className="text-gray-500 mt-1 text-lg">Welcome back, <span className="font-semibold text-gray-700">{user.name || user.email}</span></p>
+            <p className="text-gray-500 mt-1 text-lg">Bienvenido de nuevo, <span className="font-semibold text-gray-700">{user.name || user.email}</span></p>
           )}
           {isAdminView && (
-             <p className="text-gray-500 mt-1 text-lg">Viewing user data and progress</p>
+             <p className="text-gray-500 mt-1 text-lg">Viendo datos y progreso del usuario</p>
           )}
         </div>
         <div className="flex items-center gap-4">
             <div className="glass-panel px-5 py-2.5 rounded-2xl text-sm font-medium text-gray-600 shadow-sm hidden sm:block">
-            {new Date().toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}
+            {new Date().toLocaleDateString('es-ES', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}
             </div>
             {!isAdminView && (
               <button 
@@ -43,7 +43,7 @@ export default function DashboardClient({ user, exercises, logs, isAdminView = f
                   className="btn-primary py-2.5 px-6 text-sm shadow-lg shadow-orange-500/20 flex items-center gap-2"
               >
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-                  Log Workout
+                  Registrar Entreno
               </button>
             )}
         </div>
@@ -55,32 +55,32 @@ export default function DashboardClient({ user, exercises, logs, isAdminView = f
 
           <div className="card backdrop-blur-sm bg-white/80">
               <div className="flex justify-between items-center mb-6">
-                  <h2 className="text-xl font-bold text-gray-900">Recent Activity</h2>
-                  <span className="text-xs font-bold text-orange-600 bg-orange-50 px-3 py-1 rounded-full border border-orange-100">Last 100 Logs</span>
+                  <h2 className="text-xl font-bold text-gray-900">Actividad Reciente</h2>
+                  <span className="text-xs font-bold text-orange-600 bg-orange-50 px-3 py-1 rounded-full border border-orange-100">Últimos 100 Registros</span>
               </div>
               
               {logs.length === 0 ? (
                   <div className="text-center py-12 text-gray-500 bg-gray-50/50 rounded-xl border border-dashed border-gray-200">
-                      <p className="font-medium">No workouts logged yet.</p>
-                      <p className="text-sm mt-2">Start by logging your first set!</p>
+                      <p className="font-medium">Aún no hay entrenamientos registrados.</p>
+                      <p className="text-sm mt-2">¡Empieza registrando tu primera serie!</p>
                   </div>
               ) : (
                   <div className="overflow-x-auto">
                       <table className="min-w-full text-left text-sm">
                           <thead>
                               <tr className="border-b border-gray-100 text-gray-400 uppercase tracking-wider text-xs">
-                                  <th className="pb-4 font-semibold pl-4">Date</th>
-                                  <th className="pb-4 font-semibold">Exercise</th>
-                                  <th className="pb-4 font-semibold">Weight</th>
+                                  <th className="pb-4 font-semibold pl-4">Fecha</th>
+                                  <th className="pb-4 font-semibold">Ejercicio</th>
+                                  <th className="pb-4 font-semibold">Peso</th>
                                   <th className="pb-4 font-semibold">Reps</th>
-                                  <th className="pb-4 font-semibold">Sets</th>
-                                  <th className="pb-4 font-semibold">Est. 1RM</th>
+                                  <th className="pb-4 font-semibold">Series</th>
+                                  <th className="pb-4 font-semibold">1RM Est.</th>
                               </tr>
                           </thead>
                           <tbody className="divide-y divide-gray-50">
                               {logs.slice(0, 10).map((log: any) => (
                                   <tr key={log.id} className="hover:bg-orange-50/30 transition-colors group">
-                                      <td className="py-4 pl-4 text-gray-500 font-medium">{new Date(log.date).toLocaleDateString()}</td>
+                                      <td className="py-4 pl-4 text-gray-500 font-medium">{new Date(log.date).toLocaleDateString('es-ES')}</td>
                                       <td className="py-4 font-bold text-gray-800 group-hover:text-orange-700 transition-colors">{log.exercise.name}</td>
                                       <td className="py-4 text-gray-600 font-medium">{log.weight} <span className="text-xs text-gray-400 font-normal">kg</span></td>
                                       <td className="py-4 text-gray-600 font-medium">{log.reps}</td>
@@ -108,14 +108,14 @@ export default function DashboardClient({ user, exercises, logs, isAdminView = f
           
           {/* Quick Stats Card */}
           <div className="card backdrop-blur-sm bg-white/80">
-            <h2 className="text-xl font-bold text-gray-900 mb-6">Quick Stats</h2>
+            <h2 className="text-xl font-bold text-gray-900 mb-6">Estadísticas Rápidas</h2>
             <div className="grid grid-cols-2 gap-4">
               <div className="p-4 rounded-2xl bg-orange-50 border border-orange-100">
-                <p className="text-xs font-bold text-orange-600 uppercase tracking-wider mb-1">Total Workouts</p>
+                <p className="text-xs font-bold text-orange-600 uppercase tracking-wider mb-1">Entrenamientos Totales</p>
                 <p className="text-3xl font-black text-gray-900">{logs.length}</p>
               </div>
               <div className="p-4 rounded-2xl bg-amber-50 border border-amber-100">
-                <p className="text-xs font-bold text-amber-600 uppercase tracking-wider mb-1">Exercises</p>
+                <p className="text-xs font-bold text-amber-600 uppercase tracking-wider mb-1">Ejercicios</p>
                 <p className="text-3xl font-black text-gray-900">{exercises.length}</p>
               </div>
             </div>

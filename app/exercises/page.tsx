@@ -21,7 +21,7 @@ export default async function Exercises() {
       <div className="absolute top-40 left-0 -translate-x-12 w-72 h-72 bg-blue-200/20 rounded-full blur-3xl mix-blend-multiply -z-10 pointer-events-none"></div>
 
       <div className="flex justify-between items-center mb-10">
-        <h1 className="text-4xl font-extrabold tracking-tight heading-gradient">Exercise Library</h1>
+        <h1 className="text-4xl font-extrabold tracking-tight heading-gradient">Biblioteca de Ejercicios</h1>
       </div>
       
       <AddExerciseForm />
@@ -32,8 +32,8 @@ export default async function Exercises() {
                 <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4 text-gray-400">
                   <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
                 </div>
-                <p className="text-gray-500 font-medium">No exercises found.</p>
-                <p className="text-sm text-gray-400 mt-1">Add your first exercise above to get started!</p>
+                <p className="text-gray-500 font-medium">No se encontraron ejercicios.</p>
+                <p className="text-sm text-gray-400 mt-1">¡Añade tu primer ejercicio arriba para comenzar!</p>
             </div>
         ) : (
             exercises.map((ex: any) => (
@@ -45,7 +45,7 @@ export default async function Exercises() {
                 {ex.description ? (
                     <p className="text-sm text-gray-600 mt-2 line-clamp-3 leading-relaxed">{ex.description}</p>
                 ) : (
-                    <p className="text-sm text-gray-400 italic mt-2">No description provided.</p>
+                    <p className="text-sm text-gray-400 italic mt-2">Sin descripción.</p>
                 )}
             </div>
             ))

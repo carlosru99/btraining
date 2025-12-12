@@ -35,19 +35,19 @@ export default function ForgotPasswordPage() {
 
       <div className="card w-full max-w-md mx-auto backdrop-blur-sm bg-white/90">
         <div className="text-center mb-10">
-          <h2 className="text-3xl font-extrabold tracking-tight heading-gradient mb-2">Forgot Password</h2>
-          <p className="text-gray-500">Enter your email to reset your password</p>
+          <h2 className="text-3xl font-extrabold tracking-tight heading-gradient mb-2">Recuperar Contraseña</h2>
+          <p className="text-gray-500">Introduce tu email para restablecer tu contraseña</p>
         </div>
         
         <form action={handleSubmit} className="space-y-6">
           <div className="space-y-2">
-            <label className="block text-sm font-semibold text-gray-700 ml-1">Email Address</label>
+            <label className="block text-sm font-semibold text-gray-700 ml-1">Correo Electrónico</label>
             <input
               name="email"
               type="email"
               required
               className="input-field"
-              placeholder="john@example.com"
+              placeholder="juan@ejemplo.com"
             />
           </div>
 
@@ -71,16 +71,16 @@ export default function ForgotPasswordPage() {
             {loading ? (
               <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
             ) : (
-              'Send Reset Link'
+              'Enviar Enlace de Recuperación'
             )}
           </button>
         </form>
 
         <div className="mt-8 text-center">
           <p className="text-sm text-gray-500">
-            Remember your password?{' '}
+            ¿Recuerdas tu contraseña?{' '}
             <Link href="/login" className="font-semibold text-amber-600 hover:text-amber-700 transition-colors">
-              Sign in
+              Iniciar sesión
             </Link>
           </p>
         </div>

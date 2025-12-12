@@ -31,8 +31,8 @@ export default function PersonalRecords({ logs }: { logs: Log[] }) {
   return (
     <div className="card backdrop-blur-sm bg-white/80">
       <div className="flex justify-between items-center mb-6">
-        <h2 className="text-xl font-bold text-gray-900">Personal Records</h2>
-        <span className="text-xs font-bold text-amber-600 bg-amber-50 px-3 py-1 rounded-full border border-amber-100">Top Lifts</span>
+        <h2 className="text-xl font-bold text-gray-900">Récords Personales</h2>
+        <span className="text-xs font-bold text-amber-600 bg-amber-50 px-3 py-1 rounded-full border border-amber-100">Mejores Levantamientos</span>
       </div>
       
       <div className="space-y-4">
@@ -40,7 +40,7 @@ export default function PersonalRecords({ logs }: { logs: Log[] }) {
           <div key={name} className="flex items-center justify-between p-3 rounded-xl bg-gray-50/50 border border-gray-100 hover:bg-amber-50/30 transition-colors">
             <div>
               <p className="font-bold text-gray-800">{name}</p>
-              <p className="text-xs text-gray-500">{new Date(record.date).toLocaleDateString()}</p>
+              <p className="text-xs text-gray-500">{new Date(record.date).toLocaleDateString('es-ES')}</p>
             </div>
             <div className="text-right">
               <p className="text-lg font-black text-amber-600">{record.weight} <span className="text-xs font-medium text-gray-400">kg</span></p>

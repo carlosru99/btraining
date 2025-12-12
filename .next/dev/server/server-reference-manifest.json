@@ -1,27 +1,5 @@
 {
   "node": {
-    "40268f3403ef9a69731096758dd1a0b9aa67bb04ec": {
-      "workers": {
-        "app/admin/page": {
-          "moduleId": "[project]/.next-internal/server/app/admin/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "createExercise",
-          "filename": "app/actions.ts"
-        },
-        "app/exercises/page": {
-          "moduleId": "[project]/.next-internal/server/app/exercises/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "createExercise",
-          "filename": "app/actions.ts"
-        }
-      },
-      "layer": {
-        "app/admin/page": "rsc",
-        "app/exercises/page": "action-browser"
-      },
-      "filename": "app/actions.ts",
-      "exportedName": "createExercise"
-    },
     "408897ea7a0b8912ec7d0cb55c9f980527fddccca9": {
       "workers": {
         "app/admin/page": {
@@ -65,6 +43,28 @@
       },
       "filename": "app/actions.ts",
       "exportedName": "forgotPassword"
+    },
+    "40268f3403ef9a69731096758dd1a0b9aa67bb04ec": {
+      "workers": {
+        "app/admin/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "createExercise",
+          "filename": "app/actions.ts"
+        },
+        "app/exercises/page": {
+          "moduleId": "[project]/.next-internal/server/app/exercises/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "createExercise",
+          "filename": "app/actions.ts"
+        }
+      },
+      "layer": {
+        "app/admin/page": "rsc",
+        "app/exercises/page": "action-browser"
+      },
+      "filename": "app/actions.ts",
+      "exportedName": "createExercise"
     },
     "403d9de420842246c2d54af95e5d7e9cffe0923fa5": {
       "workers": {

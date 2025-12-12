@@ -19,8 +19,8 @@ export default function RegisterPage() {
 
       <div className="card w-full max-w-md mx-auto backdrop-blur-sm bg-white/90">
         <div className="text-center mb-10">
-          <h2 className="text-4xl font-extrabold tracking-tight heading-gradient mb-2">Create Account</h2>
-          <p className="text-gray-500">Start your fitness journey today</p>
+          <h2 className="text-4xl font-extrabold tracking-tight heading-gradient mb-2">Crear Cuenta</h2>
+          <p className="text-gray-500">Comienza tu viaje fitness hoy</p>
         </div>
 
         {error && (
@@ -42,26 +42,26 @@ export default function RegisterPage() {
           className="space-y-6"
         >
           <div className="space-y-2">
-            <label className="block text-sm font-semibold text-gray-700 ml-1">Full Name</label>
+            <label className="block text-sm font-semibold text-gray-700 ml-1">Nombre Completo</label>
             <input
               name="name"
               type="text"
               className="input-field"
-              placeholder="John Doe"
+              placeholder="Juan Pérez"
             />
           </div>
           <div className="space-y-2">
-            <label className="block text-sm font-semibold text-gray-700 ml-1">Email Address</label>
+            <label className="block text-sm font-semibold text-gray-700 ml-1">Correo Electrónico</label>
             <input
               name="email"
               type="email"
               required
               className="input-field"
-              placeholder="you@example.com"
+              placeholder="tu@ejemplo.com"
             />
           </div>
           <div className="space-y-2">
-            <label className="block text-sm font-semibold text-gray-700 ml-1">Password</label>
+            <label className="block text-sm font-semibold text-gray-700 ml-1">Contraseña</label>
             <input
               name="password"
               type="password"
@@ -76,15 +76,15 @@ export default function RegisterPage() {
             disabled={loading}
             className="btn-primary w-full py-3.5 text-lg shadow-lg shadow-orange-500/20"
           >
-            {loading ? 'Creating account...' : 'Sign Up'}
+            {loading ? 'Creando cuenta...' : 'Registrarse'}
           </button>
         </form>
 
         <div className="mt-8 text-center">
           <p className="text-gray-600">
-            Already have an account?{' '}
+            ¿Ya tienes una cuenta?{' '}
             <Link href="/login" className="font-semibold text-orange-600 hover:text-orange-700 transition-colors">
-              Sign in
+              Inicia sesión
             </Link>
           </p>
         </div>

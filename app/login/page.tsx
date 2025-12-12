@@ -37,27 +37,27 @@ export default function LoginPage() {
 
       <div className="card w-full max-w-md mx-auto backdrop-blur-sm bg-white/90">
         <div className="text-center mb-10">
-          <h2 className="text-4xl font-extrabold tracking-tight heading-gradient mb-2">Welcome Back</h2>
-          <p className="text-gray-500">Sign in to continue your progress</p>
+          <h2 className="text-4xl font-extrabold tracking-tight heading-gradient mb-2">Bienvenido de Nuevo</h2>
+          <p className="text-gray-500">Inicia sesión para continuar tu progreso</p>
         </div>
         
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="space-y-2">
-            <label className="block text-sm font-semibold text-gray-700 ml-1">Email Address</label>
+            <label className="block text-sm font-semibold text-gray-700 ml-1">Correo Electrónico</label>
             <input
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="input-field"
-              placeholder="you@example.com"
+              placeholder="tu@ejemplo.com"
               required
             />
           </div>
           <div className="space-y-2">
             <div className="flex justify-between items-center">
-              <label className="block text-sm font-semibold text-gray-700 ml-1">Password</label>
+              <label className="block text-sm font-semibold text-gray-700 ml-1">Contraseña</label>
               <Link href="/forgot-password" className="text-xs font-medium text-amber-600 hover:text-amber-700">
-                Forgot Password?
+                ¿Olvidaste tu contraseña?
               </Link>
             </div>
             <input
@@ -79,12 +79,12 @@ export default function LoginPage() {
                 <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                 <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
               </svg>
-            ) : 'Sign In'}
+            ) : 'Iniciar Sesión'}
           </button>
         </form>
         
         <p className="mt-6 text-center text-sm text-gray-600">
-          Don't have an account? <Link href="/register" className="text-primary font-semibold hover:underline">Create one</Link>
+          ¿No tienes una cuenta? <Link href="/register" className="text-primary font-semibold hover:underline">Crea una</Link>
         </p>
       </div>
     </div>

@@ -25,8 +25,8 @@ export default function Navbar() {
           <div className="hidden md:flex items-center space-x-2">
             {session ? (
               <>
-                <Link href="/dashboard" className={isActive('/dashboard')}>Dashboard</Link>
-                <Link href="/exercises" className={isActive('/exercises')}>Exercises</Link>
+                <Link href="/dashboard" className={isActive('/dashboard')}>Panel</Link>
+                <Link href="/exercises" className={isActive('/exercises')}>Ejercicios</Link>
                 {session.user?.role === 'ADMIN' && (
                   <Link href="/admin" className={isActive('/admin')}>Admin</Link>
                 )}
@@ -36,15 +36,15 @@ export default function Navbar() {
                     onClick={() => signOut()} 
                     className="text-sm font-medium text-red-500 hover:text-red-600 transition-colors"
                   >
-                    Logout
+                    Salir
                   </button>
                 </div>
               </>
             ) : (
               <div className="flex items-center gap-4">
-                <Link href="/login" className="text-gray-600 hover:text-primary font-medium transition-colors">Login</Link>
+                <Link href="/login" className="text-gray-600 hover:text-primary font-medium transition-colors">Entrar</Link>
                 <Link href="/register" className="btn-primary">
-                  Get Started
+                  Empezar
                 </Link>
               </div>
             )}
@@ -78,14 +78,14 @@ export default function Navbar() {
                     className={isActive('/dashboard')}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    Dashboard
+                    Panel
                   </Link>
                   <Link 
                     href="/exercises" 
                     className={isActive('/exercises')}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    Exercises
+                    Ejercicios
                   </Link>
                   {session.user?.role === 'ADMIN' && (
                     <Link 
@@ -97,12 +97,12 @@ export default function Navbar() {
                     </Link>
                   )}
                   <div className="pt-4 mt-2 border-t border-gray-100 flex flex-col gap-3 px-4">
-                    <span className="text-sm text-gray-500 font-medium">Signed in as {session.user?.name || session.user?.email}</span>
+                    <span className="text-sm text-gray-500 font-medium">Sesión iniciada como {session.user?.name || session.user?.email}</span>
                     <button 
                       onClick={() => signOut()} 
                       className="text-sm font-medium text-red-500 hover:text-red-600 transition-colors text-left"
                     >
-                      Logout
+                      Salir
                     </button>
                   </div>
                 </>
@@ -113,14 +113,14 @@ export default function Navbar() {
                     className="text-gray-600 hover:text-primary font-medium transition-colors px-4 py-2"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    Login
+                    Entrar
                   </Link>
                   <Link 
                     href="/register" 
                     className="btn-primary text-center mx-4"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    Get Started
+                    Empezar
                   </Link>
                 </div>
               )}

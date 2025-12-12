@@ -34,13 +34,13 @@ export default function ResetPasswordPage({ params }: { params: Promise<{ token:
 
       <div className="card w-full max-w-md mx-auto backdrop-blur-sm bg-white/90">
         <div className="text-center mb-10">
-          <h2 className="text-3xl font-extrabold tracking-tight heading-gradient mb-2">Reset Password</h2>
-          <p className="text-gray-500">Enter your new password below</p>
+          <h2 className="text-3xl font-extrabold tracking-tight heading-gradient mb-2">Restablecer Contraseña</h2>
+          <p className="text-gray-500">Introduce tu nueva contraseña abajo</p>
         </div>
         
         <form action={handleSubmit} className="space-y-6">
           <div className="space-y-2">
-            <label className="block text-sm font-semibold text-gray-700 ml-1">New Password</label>
+            <label className="block text-sm font-semibold text-gray-700 ml-1">Nueva Contraseña</label>
             <input
               name="password"
               type="password"
@@ -52,7 +52,7 @@ export default function ResetPasswordPage({ params }: { params: Promise<{ token:
           </div>
 
           <div className="space-y-2">
-            <label className="block text-sm font-semibold text-gray-700 ml-1">Confirm Password</label>
+            <label className="block text-sm font-semibold text-gray-700 ml-1">Confirmar Contraseña</label>
             <input
               name="confirmPassword"
               type="password"
@@ -77,7 +77,7 @@ export default function ResetPasswordPage({ params }: { params: Promise<{ token:
             {loading ? (
               <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
             ) : (
-              'Reset Password'
+              'Restablecer Contraseña'
             )}
           </button>
         </form>

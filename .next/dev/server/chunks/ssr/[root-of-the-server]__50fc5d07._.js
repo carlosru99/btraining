@@ -102,7 +102,7 @@ function Navbar() {
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                         href: "/dashboard",
                                         className: isActive('/dashboard'),
-                                        children: "Dashboard"
+                                        children: "Panel"
                                     }, void 0, false, {
                                         fileName: "[project]/components/Navbar.tsx",
                                         lineNumber: 28,
@@ -111,7 +111,7 @@ function Navbar() {
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                         href: "/exercises",
                                         className: isActive('/exercises'),
-                                        children: "Exercises"
+                                        children: "Ejercicios"
                                     }, void 0, false, {
                                         fileName: "[project]/components/Navbar.tsx",
                                         lineNumber: 29,
@@ -140,7 +140,7 @@ function Navbar() {
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                                 onClick: ()=>(0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$auth$2f$react$2f$index$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["signOut"])(),
                                                 className: "text-sm font-medium text-red-500 hover:text-red-600 transition-colors",
-                                                children: "Logout"
+                                                children: "Salir"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/Navbar.tsx",
                                                 lineNumber: 35,
@@ -159,7 +159,7 @@ function Navbar() {
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                         href: "/login",
                                         className: "text-gray-600 hover:text-primary font-medium transition-colors",
-                                        children: "Login"
+                                        children: "Entrar"
                                     }, void 0, false, {
                                         fileName: "[project]/components/Navbar.tsx",
                                         lineNumber: 45,
@@ -168,7 +168,7 @@ function Navbar() {
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                         href: "/register",
                                         className: "btn-primary",
-                                        children: "Get Started"
+                                        children: "Empezar"
                                     }, void 0, false, {
                                         fileName: "[project]/components/Navbar.tsx",
                                         lineNumber: 46,
@@ -250,7 +250,7 @@ function Navbar() {
                                     href: "/dashboard",
                                     className: isActive('/dashboard'),
                                     onClick: ()=>setIsMobileMenuOpen(false),
-                                    children: "Dashboard"
+                                    children: "Panel"
                                 }, void 0, false, {
                                     fileName: "[project]/components/Navbar.tsx",
                                     lineNumber: 76,
@@ -260,7 +260,7 @@ function Navbar() {
                                     href: "/exercises",
                                     className: isActive('/exercises'),
                                     onClick: ()=>setIsMobileMenuOpen(false),
-                                    children: "Exercises"
+                                    children: "Ejercicios"
                                 }, void 0, false, {
                                     fileName: "[project]/components/Navbar.tsx",
                                     lineNumber: 83,
@@ -282,7 +282,7 @@ function Navbar() {
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                             className: "text-sm text-gray-500 font-medium",
                                             children: [
-                                                "Signed in as ",
+                                                "Sesión iniciada como ",
                                                 session.user?.name || session.user?.email
                                             ]
                                         }, void 0, true, {
@@ -293,7 +293,7 @@ function Navbar() {
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                             onClick: ()=>(0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$auth$2f$react$2f$index$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["signOut"])(),
                                             className: "text-sm font-medium text-red-500 hover:text-red-600 transition-colors text-left",
-                                            children: "Logout"
+                                            children: "Salir"
                                         }, void 0, false, {
                                             fileName: "[project]/components/Navbar.tsx",
                                             lineNumber: 101,
@@ -313,7 +313,7 @@ function Navbar() {
                                     href: "/login",
                                     className: "text-gray-600 hover:text-primary font-medium transition-colors px-4 py-2",
                                     onClick: ()=>setIsMobileMenuOpen(false),
-                                    children: "Login"
+                                    children: "Entrar"
                                 }, void 0, false, {
                                     fileName: "[project]/components/Navbar.tsx",
                                     lineNumber: 111,
@@ -323,7 +323,7 @@ function Navbar() {
                                     href: "/register",
                                     className: "btn-primary text-center mx-4",
                                     onClick: ()=>setIsMobileMenuOpen(false),
-                                    children: "Get Started"
+                                    children: "Empezar"
                                 }, void 0, false, {
                                     fileName: "[project]/components/Navbar.tsx",
                                     lineNumber: 118,
