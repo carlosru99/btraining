@@ -28,6 +28,18 @@ export const authOptions: AuthOptions = {
           console.log("User not found:", credentials.email)
           return null
         }
+
+        // Only ADMIN and TRAINER can log in
+        if (user.role === 'CLIENT') {
+          console.log("Client login attempt denied:", credentials.email)
+          return null
+        }
+        
+        // If user has no password (e.g. invited user who hasn't claimed account), deny login
+        if (!user.password) {
+          console.log("User has no password set:", credentials.email)
+          return null
+        }
         
         const isPasswordValid = await compare(credentials.password, user.password)
 

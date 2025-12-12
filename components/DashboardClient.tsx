@@ -47,22 +47,20 @@ export default function DashboardClient({ user, exercises, logs, isAdminView = f
             <p className="text-gray-500 mt-1 text-lg">Bienvenido de nuevo, <span className="font-semibold text-gray-700">{user.name || user.email}</span></p>
           )}
           {isAdminView && (
-             <p className="text-gray-500 mt-1 text-lg">Viendo datos y progreso del usuario</p>
+             <p className="text-gray-500 mt-1 text-lg">Viendo datos y progreso del cliente</p>
           )}
         </div>
         <div className="flex items-center gap-4">
             <div className="glass-panel px-5 py-2.5 rounded-2xl text-sm font-medium text-gray-600 shadow-sm hidden sm:block">
             {new Date().toLocaleDateString('es-ES', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}
             </div>
-            {!isAdminView && (
-              <button 
-                  onClick={() => setIsModalOpen(true)}
-                  className="btn-primary py-2.5 px-6 text-sm shadow-lg shadow-orange-500/20 flex items-center gap-2"
-              >
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-                  Registrar Entreno
-              </button>
-            )}
+            <button 
+                onClick={() => setIsModalOpen(true)}
+                className="btn-primary py-2.5 px-6 text-sm shadow-lg shadow-orange-500/20 flex items-center gap-2"
+            >
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                Registrar Entreno
+            </button>
         </div>
       </div>
       
@@ -164,6 +162,7 @@ export default function DashboardClient({ user, exercises, logs, isAdminView = f
                 <LogExerciseForm 
                     exercises={exercises} 
                     onSuccess={() => setIsModalOpen(false)} 
+                    userId={isAdminView ? user.id : undefined}
                 />
             </div>
         </div>

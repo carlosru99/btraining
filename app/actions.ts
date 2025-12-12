@@ -39,11 +39,32 @@ export async function logExercise(formData: FormData) {
     return
   }
 
-  const user = await prisma.user.findUnique({
+  const currentUser = await prisma.user.findUnique({
     where: { email: session.user.email }
   })
 
-  if (!user) return
+  if (!currentUser) return
+
+  // Determine target user (Client)
+  let targetUserId = currentUser.id
+  const formUserId = formData.get("userId") as string
+
+  if (formUserId) {
+    // If a userId is provided, verify permission
+    if (currentUser.role === 'ADMIN') {
+      targetUserId = formUserId
+    } else if (currentUser.role === 'TRAINER') {
+      // Verify trainer owns this client
+      const client = await prisma.user.findUnique({
+        where: { id: formUserId }
+      })
+      if (client && client.trainerId === currentUser.id) {
+        targetUserId = formUserId
+      } else {
+        return { error: "Unauthorized" }
+      }
+    }
+  }
 
   const exerciseId = formData.get("exerciseId") as string
   const weight = parseFloat(formData.get("weight") as string)
@@ -59,7 +80,7 @@ export async function logExercise(formData: FormData) {
 
   await prisma.exerciseLog.create({
     data: {
-      userId: user.id,
+      userId: targetUserId,
       exerciseId,
       weight,
       reps,
@@ -71,32 +92,50 @@ export async function logExercise(formData: FormData) {
   })
 
   revalidatePath("/dashboard")
+  revalidatePath(`/dashboard/client/${targetUserId}`)
+  revalidatePath(`/admin/users/${targetUserId}`)
 }
 
 export async function registerUser(formData: FormData) {
   const name = formData.get("name") as string
   const email = formData.get("email") as string
   const password = formData.get("password") as string
+  const inviteToken = formData.get("inviteToken") as string
 
   if (!email || !password) return { error: "Email and password are required" }
 
-  const existingUser = await prisma.user.findUnique({
-    where: { email }
-  })
-
-  if (existingUser) {
-    return { error: "User already exists" }
-  }
-
   const hashedPassword = await hash(password, 10)
 
-  await prisma.user.create({
-    data: {
-      name,
-      email,
-      password: hashedPassword,
+  if (inviteToken) {
+    const invitedUser = await prisma.user.findFirst({
+      where: { inviteToken }
+    })
+
+    if (!invitedUser) {
+      return { error: "Invalid or expired invitation" }
     }
-  })
+
+    // Check if email is already taken by ANOTHER user
+    const existingUserWithEmail = await prisma.user.findUnique({
+      where: { email }
+    })
+
+    if (existingUserWithEmail && existingUserWithEmail.id !== invitedUser.id) {
+      return { error: "Email already in use" }
+    }
+
+    await prisma.user.update({
+      where: { id: invitedUser.id },
+      data: {
+        name,
+        email,
+        password: hashedPassword,
+        inviteToken: null, // Clear the token
+      }
+    })
+  } else {
+    return { error: "Public registration is currently disabled. Please contact your trainer for an invitation." }
+  }
 
   redirect("/login")
 }
@@ -234,5 +273,60 @@ export async function deleteLog(logId: string) {
   } catch (error) {
     console.error("Failed to delete log:", error)
     return { error: "Failed to delete log" }
+  }
+}
+
+export async function createClient(formData: FormData) {
+  const session = await getServerSession(authOptions)
+  if (!session || (session.user?.role !== 'ADMIN' && session.user?.role !== 'TRAINER')) {
+    return { error: "Unauthorized" }
+  }
+
+  const name = formData.get("name") as string
+  if (!name) return { error: "Name is required" }
+
+  try {
+    // Create a client linked to the current user (Trainer/Admin)
+    await prisma.user.create({
+      data: {
+        name,
+        role: 'CLIENT',
+        trainerId: session.user.id
+      }
+    })
+    
+    revalidatePath("/dashboard")
+    return { success: true }
+  } catch (error) {
+    console.error("Failed to create client:", error)
+    return { error: "Failed to create client" }
+  }
+}
+
+export async function createTrainer(formData: FormData) {
+  const session = await getServerSession(authOptions)
+  if (!session || session.user?.role !== 'ADMIN') {
+    return { error: "Unauthorized" }
+  }
+
+  const name = formData.get("name") as string
+  if (!name) return { error: "Name is required" }
+
+  const token = randomBytes(32).toString("hex")
+  
+  try {
+    await prisma.user.create({
+      data: {
+        name,
+        role: 'TRAINER',
+        inviteToken: token,
+      }
+    })
+    
+    revalidatePath("/admin")
+    return { success: true, token }
+  } catch (error) {
+    console.error("Failed to create trainer:", error)
+    return { error: "Failed to create trainer" }
   }
 }

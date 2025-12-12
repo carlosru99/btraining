@@ -17,14 +17,22 @@ datasource db {
 model User {
   id            String        @id @default(cuid())
   name          String?
-  email         String        @unique
-  password      String
+  email         String?       @unique
+  password      String?
   image         String?
-  role          String        @default("USER")
+  role          String        @default("CLIENT") // ADMIN, TRAINER, CLIENT
   resetToken    String?
   resetTokenExpiry DateTime?
+  inviteToken   String?       @unique
+  inviteTokenExpiry DateTime?
   createdAt     DateTime      @default(now())
   updatedAt     DateTime      @updatedAt
+  
+  // Trainer-Client Relationship
+  trainerId     String?
+  trainer       User?         @relation("TrainerClients", fields: [trainerId], references: [id])
+  clients       User[]        @relation("TrainerClients")
+
   logs          ExerciseLog[]
 }
 

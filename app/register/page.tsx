@@ -2,12 +2,32 @@
 
 import { registerUser } from "@/app/actions"
 import Link from "next/link"
-import { useRef, useState } from "react"
+import { useRef, useState, Suspense } from "react"
+import { useSearchParams } from "next/navigation"
 
-export default function RegisterPage() {
+function RegisterForm() {
   const ref = useRef<HTMLFormElement>(null)
   const [error, setError] = useState<string | null>(null)
   const [loading, setLoading] = useState(false)
+  const searchParams = useSearchParams()
+  const inviteToken = searchParams.get('token')
+
+  if (!inviteToken) {
+    return (
+      <div className="min-h-[80vh] flex items-center justify-center relative">
+        <div className="card w-full max-w-md mx-auto backdrop-blur-sm bg-white/90 text-center p-8">
+          <h2 className="text-2xl font-bold mb-4">Registro Restringido</h2>
+          <p className="text-gray-600 mb-6">
+            El registro de nuevas cuentas está disponible solo por invitación. 
+            Por favor, contacta a tu entrenador para obtener un enlace de registro.
+          </p>
+          <Link href="/login" className="btn-primary w-full py-3 block">
+            Volver al Inicio de Sesión
+          </Link>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div className="min-h-[80vh] flex items-center justify-center relative">
@@ -41,6 +61,8 @@ export default function RegisterPage() {
           ref={ref}
           className="space-y-6"
         >
+          {inviteToken && <input type="hidden" name="inviteToken" value={inviteToken} />}
+          
           <div className="space-y-2">
             <label className="block text-sm font-semibold text-gray-700 ml-1">Nombre Completo</label>
             <input
@@ -74,21 +96,37 @@ export default function RegisterPage() {
           <button
             type="submit"
             disabled={loading}
-            className="btn-primary w-full py-3.5 text-lg shadow-lg shadow-orange-500/20"
+            className="btn-primary w-full py-3 text-base shadow-lg shadow-orange-500/20"
           >
-            {loading ? 'Creando cuenta...' : 'Registrarse'}
+            {loading ? (
+              <span className="flex items-center justify-center gap-2">
+                <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                Creando cuenta...
+              </span>
+            ) : (
+              "Registrarse"
+            )}
           </button>
         </form>
 
-        <div className="mt-8 text-center">
-          <p className="text-gray-600">
-            ¿Ya tienes una cuenta?{' '}
-            <Link href="/login" className="font-semibold text-orange-600 hover:text-orange-700 transition-colors">
-              Inicia sesión
-            </Link>
-          </p>
+        <div className="mt-8 text-center text-sm text-gray-500">
+          ¿Ya tienes una cuenta?{" "}
+          <Link href="/login" className="font-bold text-orange-600 hover:text-orange-700 hover:underline">
+            Inicia sesión
+          </Link>
         </div>
       </div>
     </div>
+  )
+}
+
+export default function RegisterPage() {
+  return (
+    <Suspense fallback={<div>Cargando...</div>}>
+      <RegisterForm />
+    </Suspense>
   )
 }

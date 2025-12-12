@@ -8,12 +8,15 @@ type Exercise = {
   name: string
 }
 
-export default function LogExerciseForm({ exercises, onSuccess }: { exercises: Exercise[], onSuccess?: () => void }) {
+export default function LogExerciseForm({ exercises, onSuccess, userId }: { exercises: Exercise[], onSuccess?: () => void, userId?: string }) {
   const ref = useRef<HTMLFormElement>(null)
 
   return (
     <form
       action={async (formData) => {
+        if (userId) {
+          formData.append('userId', userId)
+        }
         await logExercise(formData)
         ref.current?.reset()
         if (onSuccess) {

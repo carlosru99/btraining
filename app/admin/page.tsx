@@ -4,6 +4,7 @@ import Link from "next/link"
 import { prisma } from "@/lib/prisma"
 import { authOptions } from "@/lib/auth"
 import { deleteUser, deleteExercise } from "@/app/actions"
+import CreateTrainerForm from "@/components/CreateTrainerForm"
 
 export default async function AdminDashboard() {
   const session = await getServerSession(authOptions)
@@ -12,9 +13,21 @@ export default async function AdminDashboard() {
     redirect('/dashboard')
   }
 
-  const users = await prisma.user.findMany({
+  const trainers = await prisma.user.findMany({
+    where: { role: 'TRAINER' },
     orderBy: { createdAt: 'desc' },
     include: {
+      _count: {
+        select: { clients: true }
+      }
+    }
+  })
+
+  const clients = await prisma.user.findMany({
+    where: { role: 'CLIENT' },
+    orderBy: { createdAt: 'desc' },
+    include: {
+      trainer: true,
       _count: {
         select: { logs: true }
       }
@@ -41,12 +54,14 @@ export default async function AdminDashboard() {
         <span className="bg-red-50 text-red-600 border border-red-100 text-xs font-bold px-4 py-1.5 rounded-full shadow-sm">ACCESO ADMIN</span>
       </div>
 
+      <CreateTrainerForm />
+
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        {/* Users Management */}
+        {/* Trainers Management */}
         <div className="card backdrop-blur-sm bg-white/80">
           <div className="flex justify-between items-center mb-6">
-            <h2 className="text-xl font-bold text-gray-900">Usuarios</h2>
-            <span className="text-xs font-bold text-gray-500 bg-gray-100 px-3 py-1 rounded-full">{users.length} Total</span>
+            <h2 className="text-xl font-bold text-gray-900">Entrenadores</h2>
+            <span className="text-xs font-bold text-gray-500 bg-gray-100 px-3 py-1 rounded-full">{trainers.length} Total</span>
           </div>
           <div className="overflow-x-auto">
             <table className="min-w-full text-left text-sm">
@@ -54,35 +69,63 @@ export default async function AdminDashboard() {
                 <tr className="border-b border-gray-100 text-gray-400 uppercase tracking-wider text-xs">
                   <th className="pb-4 font-semibold pl-2">Nombre</th>
                   <th className="pb-4 font-semibold">Email</th>
-                  <th className="pb-4 font-semibold">Rol</th>
+                  <th className="pb-4 font-semibold">Clientes</th>
+                  <th className="pb-4 font-semibold text-center">Acción</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-50">
+                {trainers.map((trainer: any) => (
+                  <tr key={trainer.id} className="hover:bg-gray-50/50 transition-colors">
+                    <td className="py-4 pl-2 font-medium text-gray-900">{trainer.name || 'N/A'}</td>
+                    <td className="py-4 text-gray-600">{trainer.email || 'Pendiente'}</td>
+                    <td className="py-4 text-gray-600">{trainer._count.clients}</td>
+                    <td className="py-4">
+                        <div className="flex items-center justify-center gap-2">
+                            <form action={deleteUser.bind(null, trainer.id)}>
+                              <button className="text-red-500 hover:text-red-700 text-xs font-medium bg-red-50 hover:bg-red-100 px-3 py-2 rounded-xl transition-colors border border-red-100">Eliminar</button>
+                            </form>
+                        </div>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        {/* Clients Management */}
+        <div className="card backdrop-blur-sm bg-white/80">
+          <div className="flex justify-between items-center mb-6">
+            <h2 className="text-xl font-bold text-gray-900">Clientes</h2>
+            <span className="text-xs font-bold text-gray-500 bg-gray-100 px-3 py-1 rounded-full">{clients.length} Total</span>
+          </div>
+          <div className="overflow-x-auto">
+            <table className="min-w-full text-left text-sm">
+              <thead>
+                <tr className="border-b border-gray-100 text-gray-400 uppercase tracking-wider text-xs">
+                  <th className="pb-4 font-semibold pl-2">Nombre</th>
+                  <th className="pb-4 font-semibold">Entrenador</th>
                   <th className="pb-4 font-semibold">Registros</th>
                   <th className="pb-4 font-semibold text-center">Acción</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-50">
-                {users.map((user: any) => (
-                  <tr key={user.id} className="hover:bg-gray-50/50 transition-colors">
-                    <td className="py-4 pl-2 font-medium text-gray-900">{user.name || 'N/A'}</td>
-                    <td className="py-4 text-gray-600">{user.email}</td>
-                    <td className="py-4">
-                      <span className={`text-xs px-2.5 py-1 rounded-full font-medium border ${user.role === 'ADMIN' ? 'bg-purple-50 text-purple-700 border-purple-100' : 'bg-gray-50 text-gray-600 border-gray-100'}`}>
-                        {user.role}
-                      </span>
-                    </td>
-                    <td className="py-4 text-gray-600">{user._count.logs}</td>
+                {clients.map((client: any) => (
+                  <tr key={client.id} className="hover:bg-gray-50/50 transition-colors">
+                    <td className="py-4 pl-2 font-medium text-gray-900">{client.name || 'N/A'}</td>
+                    <td className="py-4 text-gray-600">{client.trainer?.name || 'Sin asignar'}</td>
+                    <td className="py-4 text-gray-600">{client._count.logs}</td>
                     <td className="py-4">
                         <div className="flex items-center justify-center gap-2">
                           <Link 
-                            href={`/admin/users/${user.id}`}
+                            href={`/admin/users/${client.id}`}
                             className="inline-flex items-center justify-center bg-orange-500 hover:bg-orange-600 text-white text-xs font-bold px-4 py-2 rounded-xl transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5"
                           >
-                            Ver Panel
+                            Ver
                           </Link>
-                          {user.role !== 'ADMIN' && (
-                            <form action={deleteUser.bind(null, user.id)}>
+                            <form action={deleteUser.bind(null, client.id)}>
                               <button className="text-red-500 hover:text-red-700 text-xs font-medium bg-red-50 hover:bg-red-100 px-3 py-2 rounded-xl transition-colors border border-red-100">Eliminar</button>
                             </form>
-                          )}
                         </div>
                     </td>
                   </tr>

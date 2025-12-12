@@ -41,7 +41,6 @@ FROM base AS runner
 WORKDIR /app
 
 RUN apk add --no-cache openssl
-RUN npm install bcryptjs
 
 ENV NODE_ENV production
 # Uncomment the following line in case you want to disable telemetry during runtime.
