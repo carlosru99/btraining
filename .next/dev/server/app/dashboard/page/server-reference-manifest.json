@@ -1,5 +1,20 @@
 {
   "node": {
+    "404deaa1afdc7172b52bf5fff725cd09fa8f5da961": {
+      "workers": {
+        "app/dashboard/page": {
+          "moduleId": "[project]/.next-internal/server/app/dashboard/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "deleteLog",
+          "filename": "app/actions.ts"
+        }
+      },
+      "layer": {
+        "app/dashboard/page": "action-browser"
+      },
+      "exportedName": "deleteLog",
+      "filename": "app/actions.ts"
+    },
     "408897ea7a0b8912ec7d0cb55c9f980527fddccca9": {
       "workers": {
         "app/dashboard/page": {

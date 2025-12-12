@@ -8,6 +8,7 @@ type Log = {
   weight: number
   reps: number
   sets: number
+  estimated1RM?: number
   exercise: {
     name: string
   }
@@ -21,7 +22,7 @@ export default function ProgressionChart({ logs }: { logs: Log[] }) {
   }, [logs]);
 
   const [selectedExercise, setSelectedExercise] = useState<string>(exerciseNames[0] || '');
-  const [metric, setMetric] = useState<'weight' | 'volume'>('weight');
+  const [metric, setMetric] = useState<'weight' | 'volume' | '1rm'>('weight');
 
   // Filter data based on selection
   const data = useMemo(() => {
@@ -31,7 +32,8 @@ export default function ProgressionChart({ logs }: { logs: Log[] }) {
       .map(log => ({
         date: new Date(log.date).toLocaleDateString(),
         weight: log.weight,
-        volume: log.weight * log.reps * log.sets
+        volume: log.weight * log.reps * log.sets,
+        '1rm': log.estimated1RM || (log.weight * (1 + log.reps / 30))
       }))
       .reverse();
   }, [logs, selectedExercise]);
@@ -63,6 +65,16 @@ export default function ProgressionChart({ logs }: { logs: Log[] }) {
               }`}
             >
               Volumen
+            </button>
+            <button
+              onClick={() => setMetric('1rm')}
+              className={`px-3 py-1.5 text-xs font-bold rounded-lg transition-all ${
+                metric === '1rm' 
+                  ? 'bg-white text-orange-600 shadow-sm' 
+                  : 'text-gray-500 hover:text-gray-700'
+              }`}
+            >
+              1RM
             </button>
           </div>
           <select 
@@ -102,7 +114,7 @@ export default function ProgressionChart({ logs }: { logs: Log[] }) {
             />
             <Legend wrapperStyle={{ paddingTop: '20px' }} />
             <Line 
-              name={metric === 'weight' ? 'Peso (kg)' : 'Volumen (kg)'}
+              name={metric === 'weight' ? 'Peso (kg)' : metric === 'volume' ? 'Volumen (kg)' : '1RM Estimado (kg)'}
               type="monotone" 
               dataKey={metric} 
               stroke="#f97316" 
@@ -114,7 +126,7 @@ export default function ProgressionChart({ logs }: { logs: Log[] }) {
         </ResponsiveContainer>
       ) : (
         <div className="h-full flex items-center justify-center text-gray-400">
-          <p>No hay datos para este ejercicio.</p>
+          Selecciona un ejercicio para ver su progreso
         </div>
       )}
     </div>

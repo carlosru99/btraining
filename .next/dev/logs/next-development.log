@@ -156,3 +156,1776 @@
 [00:29:38.439] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE 1=1 ORDER BY \"public\".\"Exercise\".\"name\" ASC OFFSET $1"
 [00:29:38.441] Server  LOG     prisma:query "SELECT \"public\".\"ExerciseLog\".\"id\", \"public\".\"ExerciseLog\".\"weight\", \"public\".\"ExerciseLog\".\"reps\", \"public\".\"ExerciseLog\".\"sets\", \"public\".\"ExerciseLog\".\"rpe\", \"public\".\"ExerciseLog\".\"estimated1RM\", \"public\".\"ExerciseLog\".\"date\", \"public\".\"ExerciseLog\".\"userId\", \"public\".\"ExerciseLog\".\"exerciseId\", \"public\".\"ExerciseLog\".\"createdAt\", \"public\".\"ExerciseLog\".\"updatedAt\" FROM \"public\".\"ExerciseLog\" WHERE \"public\".\"ExerciseLog\".\"userId\" = $1 ORDER BY \"public\".\"ExerciseLog\".\"date\" DESC LIMIT $2 OFFSET $3"
 [00:29:38.441] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE \"public\".\"Exercise\".\"id\" IN ($1,$2) OFFSET $3"
+[05:28:20.367] Server  LOG      ✓ Compiled in 25ms
+[05:28:25.053] Server  LOG      ✓ Compiled in 11ms
+[05:28:35.339] Server  LOG      ✓ Compiled in 100ms
+[05:28:35.401] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"name\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"resetToken\", \"public\".\"User\".\"resetTokenExpiry\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE (\"public\".\"User\".\"email\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[05:28:35.401] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"name\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"resetToken\", \"public\".\"User\".\"resetTokenExpiry\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE (\"public\".\"User\".\"id\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[05:28:35.412] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE 1=1 ORDER BY \"public\".\"Exercise\".\"name\" ASC OFFSET $1"
+[05:28:35.412] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE 1=1 ORDER BY \"public\".\"Exercise\".\"name\" ASC OFFSET $1"
+[05:28:35.417] Server  LOG     prisma:query "SELECT \"public\".\"ExerciseLog\".\"id\", \"public\".\"ExerciseLog\".\"weight\", \"public\".\"ExerciseLog\".\"reps\", \"public\".\"ExerciseLog\".\"sets\", \"public\".\"ExerciseLog\".\"rpe\", \"public\".\"ExerciseLog\".\"estimated1RM\", \"public\".\"ExerciseLog\".\"date\", \"public\".\"ExerciseLog\".\"userId\", \"public\".\"ExerciseLog\".\"exerciseId\", \"public\".\"ExerciseLog\".\"createdAt\", \"public\".\"ExerciseLog\".\"updatedAt\" FROM \"public\".\"ExerciseLog\" WHERE \"public\".\"ExerciseLog\".\"userId\" = $1 ORDER BY \"public\".\"ExerciseLog\".\"date\" DESC LIMIT $2 OFFSET $3"
+[05:28:35.419] Server  LOG     prisma:query "SELECT \"public\".\"ExerciseLog\".\"id\", \"public\".\"ExerciseLog\".\"weight\", \"public\".\"ExerciseLog\".\"reps\", \"public\".\"ExerciseLog\".\"sets\", \"public\".\"ExerciseLog\".\"rpe\", \"public\".\"ExerciseLog\".\"estimated1RM\", \"public\".\"ExerciseLog\".\"date\", \"public\".\"ExerciseLog\".\"userId\", \"public\".\"ExerciseLog\".\"exerciseId\", \"public\".\"ExerciseLog\".\"createdAt\", \"public\".\"ExerciseLog\".\"updatedAt\" FROM \"public\".\"ExerciseLog\" WHERE \"public\".\"ExerciseLog\".\"userId\" = $1 ORDER BY \"public\".\"ExerciseLog\".\"date\" DESC LIMIT $2 OFFSET $3"
+[05:28:35.419] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE \"public\".\"Exercise\".\"id\" IN ($1,$2) OFFSET $3"
+[05:28:35.419] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE \"public\".\"Exercise\".\"id\" IN ($1,$2) OFFSET $3"
+[05:28:35.449] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"name\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"resetToken\", \"public\".\"User\".\"resetTokenExpiry\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE (\"public\".\"User\".\"email\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[05:28:35.461] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE 1=1 ORDER BY \"public\".\"Exercise\".\"name\" ASC OFFSET $1"
+[05:28:35.466] Server  LOG     prisma:query "SELECT \"public\".\"ExerciseLog\".\"id\", \"public\".\"ExerciseLog\".\"weight\", \"public\".\"ExerciseLog\".\"reps\", \"public\".\"ExerciseLog\".\"sets\", \"public\".\"ExerciseLog\".\"rpe\", \"public\".\"ExerciseLog\".\"estimated1RM\", \"public\".\"ExerciseLog\".\"date\", \"public\".\"ExerciseLog\".\"userId\", \"public\".\"ExerciseLog\".\"exerciseId\", \"public\".\"ExerciseLog\".\"createdAt\", \"public\".\"ExerciseLog\".\"updatedAt\" FROM \"public\".\"ExerciseLog\" WHERE \"public\".\"ExerciseLog\".\"userId\" = $1 ORDER BY \"public\".\"ExerciseLog\".\"date\" DESC LIMIT $2 OFFSET $3"
+[05:28:35.467] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE \"public\".\"Exercise\".\"id\" IN ($1,$2) OFFSET $3"
+[05:28:35.468] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"name\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"resetToken\", \"public\".\"User\".\"resetTokenExpiry\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE (\"public\".\"User\".\"id\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[05:28:35.484] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE 1=1 ORDER BY \"public\".\"Exercise\".\"name\" ASC OFFSET $1"
+[05:28:35.484] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"name\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"resetToken\", \"public\".\"User\".\"resetTokenExpiry\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE (\"public\".\"User\".\"email\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[05:28:35.485] Server  LOG     prisma:query "SELECT \"public\".\"ExerciseLog\".\"id\", \"public\".\"ExerciseLog\".\"weight\", \"public\".\"ExerciseLog\".\"reps\", \"public\".\"ExerciseLog\".\"sets\", \"public\".\"ExerciseLog\".\"rpe\", \"public\".\"ExerciseLog\".\"estimated1RM\", \"public\".\"ExerciseLog\".\"date\", \"public\".\"ExerciseLog\".\"userId\", \"public\".\"ExerciseLog\".\"exerciseId\", \"public\".\"ExerciseLog\".\"createdAt\", \"public\".\"ExerciseLog\".\"updatedAt\" FROM \"public\".\"ExerciseLog\" WHERE \"public\".\"ExerciseLog\".\"userId\" = $1 ORDER BY \"public\".\"ExerciseLog\".\"date\" DESC LIMIT $2 OFFSET $3"
+[05:28:35.486] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE 1=1 ORDER BY \"public\".\"Exercise\".\"name\" ASC OFFSET $1"
+[05:28:35.487] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE \"public\".\"Exercise\".\"id\" IN ($1,$2) OFFSET $3"
+[05:28:35.488] Server  LOG     prisma:query "SELECT \"public\".\"ExerciseLog\".\"id\", \"public\".\"ExerciseLog\".\"weight\", \"public\".\"ExerciseLog\".\"reps\", \"public\".\"ExerciseLog\".\"sets\", \"public\".\"ExerciseLog\".\"rpe\", \"public\".\"ExerciseLog\".\"estimated1RM\", \"public\".\"ExerciseLog\".\"date\", \"public\".\"ExerciseLog\".\"userId\", \"public\".\"ExerciseLog\".\"exerciseId\", \"public\".\"ExerciseLog\".\"createdAt\", \"public\".\"ExerciseLog\".\"updatedAt\" FROM \"public\".\"ExerciseLog\" WHERE \"public\".\"ExerciseLog\".\"userId\" = $1 ORDER BY \"public\".\"ExerciseLog\".\"date\" DESC LIMIT $2 OFFSET $3"
+[05:28:35.488] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE \"public\".\"Exercise\".\"id\" IN ($1,$2) OFFSET $3"
+[05:28:35.503] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"name\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"resetToken\", \"public\".\"User\".\"resetTokenExpiry\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE (\"public\".\"User\".\"email\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[05:28:35.504] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE 1=1 ORDER BY \"public\".\"Exercise\".\"name\" ASC OFFSET $1"
+[05:28:35.505] Server  LOG     prisma:query "SELECT \"public\".\"ExerciseLog\".\"id\", \"public\".\"ExerciseLog\".\"weight\", \"public\".\"ExerciseLog\".\"reps\", \"public\".\"ExerciseLog\".\"sets\", \"public\".\"ExerciseLog\".\"rpe\", \"public\".\"ExerciseLog\".\"estimated1RM\", \"public\".\"ExerciseLog\".\"date\", \"public\".\"ExerciseLog\".\"userId\", \"public\".\"ExerciseLog\".\"exerciseId\", \"public\".\"ExerciseLog\".\"createdAt\", \"public\".\"ExerciseLog\".\"updatedAt\" FROM \"public\".\"ExerciseLog\" WHERE \"public\".\"ExerciseLog\".\"userId\" = $1 ORDER BY \"public\".\"ExerciseLog\".\"date\" DESC LIMIT $2 OFFSET $3"
+[05:28:35.506] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE \"public\".\"Exercise\".\"id\" IN ($1,$2) OFFSET $3"
+[05:28:35.574] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"name\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"resetToken\", \"public\".\"User\".\"resetTokenExpiry\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE (\"public\".\"User\".\"id\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[05:28:35.576] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE 1=1 ORDER BY \"public\".\"Exercise\".\"name\" ASC OFFSET $1"
+[05:28:35.577] Server  LOG     prisma:query "SELECT \"public\".\"ExerciseLog\".\"id\", \"public\".\"ExerciseLog\".\"weight\", \"public\".\"ExerciseLog\".\"reps\", \"public\".\"ExerciseLog\".\"sets\", \"public\".\"ExerciseLog\".\"rpe\", \"public\".\"ExerciseLog\".\"estimated1RM\", \"public\".\"ExerciseLog\".\"date\", \"public\".\"ExerciseLog\".\"userId\", \"public\".\"ExerciseLog\".\"exerciseId\", \"public\".\"ExerciseLog\".\"createdAt\", \"public\".\"ExerciseLog\".\"updatedAt\" FROM \"public\".\"ExerciseLog\" WHERE \"public\".\"ExerciseLog\".\"userId\" = $1 ORDER BY \"public\".\"ExerciseLog\".\"date\" DESC LIMIT $2 OFFSET $3"
+[05:28:35.579] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE \"public\".\"Exercise\".\"id\" IN ($1,$2) OFFSET $3"
+[05:28:35.592] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"name\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"resetToken\", \"public\".\"User\".\"resetTokenExpiry\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE (\"public\".\"User\".\"id\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[05:28:35.593] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE 1=1 ORDER BY \"public\".\"Exercise\".\"name\" ASC OFFSET $1"
+[05:28:35.594] Server  LOG     prisma:query "SELECT \"public\".\"ExerciseLog\".\"id\", \"public\".\"ExerciseLog\".\"weight\", \"public\".\"ExerciseLog\".\"reps\", \"public\".\"ExerciseLog\".\"sets\", \"public\".\"ExerciseLog\".\"rpe\", \"public\".\"ExerciseLog\".\"estimated1RM\", \"public\".\"ExerciseLog\".\"date\", \"public\".\"ExerciseLog\".\"userId\", \"public\".\"ExerciseLog\".\"exerciseId\", \"public\".\"ExerciseLog\".\"createdAt\", \"public\".\"ExerciseLog\".\"updatedAt\" FROM \"public\".\"ExerciseLog\" WHERE \"public\".\"ExerciseLog\".\"userId\" = $1 ORDER BY \"public\".\"ExerciseLog\".\"date\" DESC LIMIT $2 OFFSET $3"
+[05:28:35.595] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE \"public\".\"Exercise\".\"id\" IN ($1,$2) OFFSET $3"
+[05:28:44.418] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"name\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"resetToken\", \"public\".\"User\".\"resetTokenExpiry\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE (\"public\".\"User\".\"email\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[05:28:44.419] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE 1=1 ORDER BY \"public\".\"Exercise\".\"name\" ASC OFFSET $1"
+[05:28:44.420] Server  LOG     prisma:query "SELECT \"public\".\"ExerciseLog\".\"id\", \"public\".\"ExerciseLog\".\"weight\", \"public\".\"ExerciseLog\".\"reps\", \"public\".\"ExerciseLog\".\"sets\", \"public\".\"ExerciseLog\".\"rpe\", \"public\".\"ExerciseLog\".\"estimated1RM\", \"public\".\"ExerciseLog\".\"date\", \"public\".\"ExerciseLog\".\"userId\", \"public\".\"ExerciseLog\".\"exerciseId\", \"public\".\"ExerciseLog\".\"createdAt\", \"public\".\"ExerciseLog\".\"updatedAt\" FROM \"public\".\"ExerciseLog\" WHERE \"public\".\"ExerciseLog\".\"userId\" = $1 ORDER BY \"public\".\"ExerciseLog\".\"date\" DESC LIMIT $2 OFFSET $3"
+[05:28:44.422] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE \"public\".\"Exercise\".\"id\" IN ($1,$2) OFFSET $3"
+[05:28:44.517] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"name\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"resetToken\", \"public\".\"User\".\"resetTokenExpiry\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE (\"public\".\"User\".\"id\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[05:28:44.519] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE 1=1 ORDER BY \"public\".\"Exercise\".\"name\" ASC OFFSET $1"
+[05:28:44.526] Server  LOG     prisma:query "SELECT \"public\".\"ExerciseLog\".\"id\", \"public\".\"ExerciseLog\".\"weight\", \"public\".\"ExerciseLog\".\"reps\", \"public\".\"ExerciseLog\".\"sets\", \"public\".\"ExerciseLog\".\"rpe\", \"public\".\"ExerciseLog\".\"estimated1RM\", \"public\".\"ExerciseLog\".\"date\", \"public\".\"ExerciseLog\".\"userId\", \"public\".\"ExerciseLog\".\"exerciseId\", \"public\".\"ExerciseLog\".\"createdAt\", \"public\".\"ExerciseLog\".\"updatedAt\" FROM \"public\".\"ExerciseLog\" WHERE \"public\".\"ExerciseLog\".\"userId\" = $1 ORDER BY \"public\".\"ExerciseLog\".\"date\" DESC LIMIT $2 OFFSET $3"
+[05:28:44.526] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE \"public\".\"Exercise\".\"id\" IN ($1,$2) OFFSET $3"
+[05:28:44.526] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"name\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"resetToken\", \"public\".\"User\".\"resetTokenExpiry\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE (\"public\".\"User\".\"email\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[05:28:44.530] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE 1=1 ORDER BY \"public\".\"Exercise\".\"name\" ASC OFFSET $1"
+[05:28:44.534] Server  LOG     prisma:query "SELECT \"public\".\"ExerciseLog\".\"id\", \"public\".\"ExerciseLog\".\"weight\", \"public\".\"ExerciseLog\".\"reps\", \"public\".\"ExerciseLog\".\"sets\", \"public\".\"ExerciseLog\".\"rpe\", \"public\".\"ExerciseLog\".\"estimated1RM\", \"public\".\"ExerciseLog\".\"date\", \"public\".\"ExerciseLog\".\"userId\", \"public\".\"ExerciseLog\".\"exerciseId\", \"public\".\"ExerciseLog\".\"createdAt\", \"public\".\"ExerciseLog\".\"updatedAt\" FROM \"public\".\"ExerciseLog\" WHERE \"public\".\"ExerciseLog\".\"userId\" = $1 ORDER BY \"public\".\"ExerciseLog\".\"date\" DESC LIMIT $2 OFFSET $3"
+[05:28:44.539] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE \"public\".\"Exercise\".\"id\" IN ($1,$2) OFFSET $3"
+[05:28:44.592] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(85%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[05:28:44.592] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(85%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[05:28:44.596] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"name\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"resetToken\", \"public\".\"User\".\"resetTokenExpiry\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE (\"public\".\"User\".\"id\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[05:28:44.598] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE 1=1 ORDER BY \"public\".\"Exercise\".\"name\" ASC OFFSET $1"
+[05:28:44.601] Server  LOG     prisma:query "SELECT \"public\".\"ExerciseLog\".\"id\", \"public\".\"ExerciseLog\".\"weight\", \"public\".\"ExerciseLog\".\"reps\", \"public\".\"ExerciseLog\".\"sets\", \"public\".\"ExerciseLog\".\"rpe\", \"public\".\"ExerciseLog\".\"estimated1RM\", \"public\".\"ExerciseLog\".\"date\", \"public\".\"ExerciseLog\".\"userId\", \"public\".\"ExerciseLog\".\"exerciseId\", \"public\".\"ExerciseLog\".\"createdAt\", \"public\".\"ExerciseLog\".\"updatedAt\" FROM \"public\".\"ExerciseLog\" WHERE \"public\".\"ExerciseLog\".\"userId\" = $1 ORDER BY \"public\".\"ExerciseLog\".\"date\" DESC LIMIT $2 OFFSET $3"
+[05:28:44.601] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE \"public\".\"Exercise\".\"id\" IN ($1,$2) OFFSET $3"
+[05:28:44.841] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(85%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[05:28:44.841] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(85%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[05:28:59.910] Server  LOG      ✓ Compiled in 122ms
+[05:29:49.387] Server  LOG      ✓ Compiled in 85ms
+[05:29:49.396] Server  LOG     prisma:query "SELECT 1"
+[05:29:49.397] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"name\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"resetToken\", \"public\".\"User\".\"resetTokenExpiry\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE (\"public\".\"User\".\"id\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[05:29:49.397] Server  LOG     prisma:query "SELECT 1"
+[05:29:49.399] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"name\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"resetToken\", \"public\".\"User\".\"resetTokenExpiry\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE (\"public\".\"User\".\"email\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[05:29:49.399] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE 1=1 ORDER BY \"public\".\"Exercise\".\"name\" ASC OFFSET $1"
+[05:29:49.402] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE 1=1 ORDER BY \"public\".\"Exercise\".\"name\" ASC OFFSET $1"
+[05:29:49.404] Server  LOG     prisma:query "SELECT \"public\".\"ExerciseLog\".\"id\", \"public\".\"ExerciseLog\".\"weight\", \"public\".\"ExerciseLog\".\"reps\", \"public\".\"ExerciseLog\".\"sets\", \"public\".\"ExerciseLog\".\"rpe\", \"public\".\"ExerciseLog\".\"estimated1RM\", \"public\".\"ExerciseLog\".\"date\", \"public\".\"ExerciseLog\".\"userId\", \"public\".\"ExerciseLog\".\"exerciseId\", \"public\".\"ExerciseLog\".\"createdAt\", \"public\".\"ExerciseLog\".\"updatedAt\" FROM \"public\".\"ExerciseLog\" WHERE \"public\".\"ExerciseLog\".\"userId\" = $1 ORDER BY \"public\".\"ExerciseLog\".\"date\" DESC LIMIT $2 OFFSET $3"
+[05:29:49.404] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE \"public\".\"Exercise\".\"id\" IN ($1,$2) OFFSET $3"
+[05:29:49.406] Server  LOG     prisma:query "SELECT \"public\".\"ExerciseLog\".\"id\", \"public\".\"ExerciseLog\".\"weight\", \"public\".\"ExerciseLog\".\"reps\", \"public\".\"ExerciseLog\".\"sets\", \"public\".\"ExerciseLog\".\"rpe\", \"public\".\"ExerciseLog\".\"estimated1RM\", \"public\".\"ExerciseLog\".\"date\", \"public\".\"ExerciseLog\".\"userId\", \"public\".\"ExerciseLog\".\"exerciseId\", \"public\".\"ExerciseLog\".\"createdAt\", \"public\".\"ExerciseLog\".\"updatedAt\" FROM \"public\".\"ExerciseLog\" WHERE \"public\".\"ExerciseLog\".\"userId\" = $1 ORDER BY \"public\".\"ExerciseLog\".\"date\" DESC LIMIT $2 OFFSET $3"
+[05:29:49.406] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE \"public\".\"Exercise\".\"id\" IN ($1,$2) OFFSET $3"
+[05:29:49.470] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"name\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"resetToken\", \"public\".\"User\".\"resetTokenExpiry\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE (\"public\".\"User\".\"id\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[05:29:49.472] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE 1=1 ORDER BY \"public\".\"Exercise\".\"name\" ASC OFFSET $1"
+[05:29:49.473] Server  LOG     prisma:query "SELECT \"public\".\"ExerciseLog\".\"id\", \"public\".\"ExerciseLog\".\"weight\", \"public\".\"ExerciseLog\".\"reps\", \"public\".\"ExerciseLog\".\"sets\", \"public\".\"ExerciseLog\".\"rpe\", \"public\".\"ExerciseLog\".\"estimated1RM\", \"public\".\"ExerciseLog\".\"date\", \"public\".\"ExerciseLog\".\"userId\", \"public\".\"ExerciseLog\".\"exerciseId\", \"public\".\"ExerciseLog\".\"createdAt\", \"public\".\"ExerciseLog\".\"updatedAt\" FROM \"public\".\"ExerciseLog\" WHERE \"public\".\"ExerciseLog\".\"userId\" = $1 ORDER BY \"public\".\"ExerciseLog\".\"date\" DESC LIMIT $2 OFFSET $3"
+[05:29:49.473] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"name\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"resetToken\", \"public\".\"User\".\"resetTokenExpiry\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE (\"public\".\"User\".\"email\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[05:29:49.475] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE \"public\".\"Exercise\".\"id\" IN ($1,$2) OFFSET $3"
+[05:29:49.475] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE 1=1 ORDER BY \"public\".\"Exercise\".\"name\" ASC OFFSET $1"
+[05:29:49.487] Server  LOG     prisma:query "SELECT \"public\".\"ExerciseLog\".\"id\", \"public\".\"ExerciseLog\".\"weight\", \"public\".\"ExerciseLog\".\"reps\", \"public\".\"ExerciseLog\".\"sets\", \"public\".\"ExerciseLog\".\"rpe\", \"public\".\"ExerciseLog\".\"estimated1RM\", \"public\".\"ExerciseLog\".\"date\", \"public\".\"ExerciseLog\".\"userId\", \"public\".\"ExerciseLog\".\"exerciseId\", \"public\".\"ExerciseLog\".\"createdAt\", \"public\".\"ExerciseLog\".\"updatedAt\" FROM \"public\".\"ExerciseLog\" WHERE \"public\".\"ExerciseLog\".\"userId\" = $1 ORDER BY \"public\".\"ExerciseLog\".\"date\" DESC LIMIT $2 OFFSET $3"
+[05:29:49.487] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE \"public\".\"Exercise\".\"id\" IN ($1,$2) OFFSET $3"
+[05:29:49.491] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"name\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"resetToken\", \"public\".\"User\".\"resetTokenExpiry\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE (\"public\".\"User\".\"email\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[05:29:49.492] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE 1=1 ORDER BY \"public\".\"Exercise\".\"name\" ASC OFFSET $1"
+[05:29:49.504] Server  LOG     prisma:query "SELECT \"public\".\"ExerciseLog\".\"id\", \"public\".\"ExerciseLog\".\"weight\", \"public\".\"ExerciseLog\".\"reps\", \"public\".\"ExerciseLog\".\"sets\", \"public\".\"ExerciseLog\".\"rpe\", \"public\".\"ExerciseLog\".\"estimated1RM\", \"public\".\"ExerciseLog\".\"date\", \"public\".\"ExerciseLog\".\"userId\", \"public\".\"ExerciseLog\".\"exerciseId\", \"public\".\"ExerciseLog\".\"createdAt\", \"public\".\"ExerciseLog\".\"updatedAt\" FROM \"public\".\"ExerciseLog\" WHERE \"public\".\"ExerciseLog\".\"userId\" = $1 ORDER BY \"public\".\"ExerciseLog\".\"date\" DESC LIMIT $2 OFFSET $3"
+[05:29:49.504] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE \"public\".\"Exercise\".\"id\" IN ($1,$2) OFFSET $3"
+[05:29:49.507] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"name\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"resetToken\", \"public\".\"User\".\"resetTokenExpiry\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE (\"public\".\"User\".\"email\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[05:29:49.509] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE 1=1 ORDER BY \"public\".\"Exercise\".\"name\" ASC OFFSET $1"
+[05:29:49.510] Server  LOG     prisma:query "SELECT \"public\".\"ExerciseLog\".\"id\", \"public\".\"ExerciseLog\".\"weight\", \"public\".\"ExerciseLog\".\"reps\", \"public\".\"ExerciseLog\".\"sets\", \"public\".\"ExerciseLog\".\"rpe\", \"public\".\"ExerciseLog\".\"estimated1RM\", \"public\".\"ExerciseLog\".\"date\", \"public\".\"ExerciseLog\".\"userId\", \"public\".\"ExerciseLog\".\"exerciseId\", \"public\".\"ExerciseLog\".\"createdAt\", \"public\".\"ExerciseLog\".\"updatedAt\" FROM \"public\".\"ExerciseLog\" WHERE \"public\".\"ExerciseLog\".\"userId\" = $1 ORDER BY \"public\".\"ExerciseLog\".\"date\" DESC LIMIT $2 OFFSET $3"
+[05:29:49.511] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE \"public\".\"Exercise\".\"id\" IN ($1,$2) OFFSET $3"
+[05:29:49.566] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"name\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"resetToken\", \"public\".\"User\".\"resetTokenExpiry\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE (\"public\".\"User\".\"id\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[05:29:49.567] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE 1=1 ORDER BY \"public\".\"Exercise\".\"name\" ASC OFFSET $1"
+[05:29:49.568] Server  LOG     prisma:query "SELECT \"public\".\"ExerciseLog\".\"id\", \"public\".\"ExerciseLog\".\"weight\", \"public\".\"ExerciseLog\".\"reps\", \"public\".\"ExerciseLog\".\"sets\", \"public\".\"ExerciseLog\".\"rpe\", \"public\".\"ExerciseLog\".\"estimated1RM\", \"public\".\"ExerciseLog\".\"date\", \"public\".\"ExerciseLog\".\"userId\", \"public\".\"ExerciseLog\".\"exerciseId\", \"public\".\"ExerciseLog\".\"createdAt\", \"public\".\"ExerciseLog\".\"updatedAt\" FROM \"public\".\"ExerciseLog\" WHERE \"public\".\"ExerciseLog\".\"userId\" = $1 ORDER BY \"public\".\"ExerciseLog\".\"date\" DESC LIMIT $2 OFFSET $3"
+[05:29:49.568] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE \"public\".\"Exercise\".\"id\" IN ($1,$2) OFFSET $3"
+[05:29:49.672] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"name\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"resetToken\", \"public\".\"User\".\"resetTokenExpiry\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE (\"public\".\"User\".\"id\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[05:29:49.673] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE 1=1 ORDER BY \"public\".\"Exercise\".\"name\" ASC OFFSET $1"
+[05:29:49.675] Server  LOG     prisma:query "SELECT \"public\".\"ExerciseLog\".\"id\", \"public\".\"ExerciseLog\".\"weight\", \"public\".\"ExerciseLog\".\"reps\", \"public\".\"ExerciseLog\".\"sets\", \"public\".\"ExerciseLog\".\"rpe\", \"public\".\"ExerciseLog\".\"estimated1RM\", \"public\".\"ExerciseLog\".\"date\", \"public\".\"ExerciseLog\".\"userId\", \"public\".\"ExerciseLog\".\"exerciseId\", \"public\".\"ExerciseLog\".\"createdAt\", \"public\".\"ExerciseLog\".\"updatedAt\" FROM \"public\".\"ExerciseLog\" WHERE \"public\".\"ExerciseLog\".\"userId\" = $1 ORDER BY \"public\".\"ExerciseLog\".\"date\" DESC LIMIT $2 OFFSET $3"
+[05:29:49.676] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE \"public\".\"Exercise\".\"id\" IN ($1,$2) OFFSET $3"
+[05:30:05.914] Server  LOG      ✓ Compiled in 12ms
+[05:30:06.115] Browser ERROR   ./components/ProgressionChart.tsx:135:11
+Parsing ecmascript source code failed
+  133 |   );
+  134 | }
+> 135 |           </LineChart>
+      |           ^
+  136 |         </ResponsiveContainer>
+  137 |       ) : (
+  138 |         <div className="h-full flex items-center justify-center text-gray-400">
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./components/ProgressionChart.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ProgressionChart.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+[05:30:06.115] Browser ERROR   ./components/ProgressionChart.tsx:135:12
+Parsing ecmascript source code failed
+  133 |   );
+  134 | }
+> 135 |           </LineChart>
+      |            ^^^^^^^^^^^
+  136 |         </ResponsiveContainer>
+  137 |       ) : (
+  138 |         <div className="h-full flex items-center justify-center text-gray-400">
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./components/ProgressionChart.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ProgressionChart.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+[05:30:06.842] Browser ERROR   ./components/ProgressionChart.tsx:135:11
+Parsing ecmascript source code failed
+  133 |   );
+  134 | }
+> 135 |           </LineChart>
+      |           ^
+  136 |         </ResponsiveContainer>
+  137 |       ) : (
+  138 |         <div className="h-full flex items-center justify-center text-gray-400">
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./components/ProgressionChart.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ProgressionChart.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+[05:30:06.842] Browser ERROR   ./components/ProgressionChart.tsx:135:12
+Parsing ecmascript source code failed
+  133 |   );
+  134 | }
+> 135 |           </LineChart>
+      |            ^^^^^^^^^^^
+  136 |         </ResponsiveContainer>
+  137 |       ) : (
+  138 |         <div className="h-full flex items-center justify-center text-gray-400">
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./components/ProgressionChart.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ProgressionChart.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+[05:30:27.632] Browser ERROR   ./components/ProgressionChart.tsx:135:11
+Parsing ecmascript source code failed
+  133 |   );
+  134 | }
+> 135 |           </LineChart>
+      |           ^
+  136 |         </ResponsiveContainer>
+  137 |       ) : (
+  138 |         <div className="h-full flex items-center justify-center text-gray-400">
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./components/ProgressionChart.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ProgressionChart.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+[05:30:27.632] Browser ERROR   ./components/ProgressionChart.tsx:135:12
+Parsing ecmascript source code failed
+  133 |   );
+  134 | }
+> 135 |           </LineChart>
+      |            ^^^^^^^^^^^
+  136 |         </ResponsiveContainer>
+  137 |       ) : (
+  138 |         <div className="h-full flex items-center justify-center text-gray-400">
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./components/ProgressionChart.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ProgressionChart.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+[05:30:27.842] Browser ERROR   ./components/ProgressionChart.tsx:135:11
+Parsing ecmascript source code failed
+  133 |   );
+  134 | }
+> 135 |           </LineChart>
+      |           ^
+  136 |         </ResponsiveContainer>
+  137 |       ) : (
+  138 |         <div className="h-full flex items-center justify-center text-gray-400">
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./components/ProgressionChart.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ProgressionChart.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+[05:30:27.842] Browser ERROR   ./components/ProgressionChart.tsx:135:12
+Parsing ecmascript source code failed
+  133 |   );
+  134 | }
+> 135 |           </LineChart>
+      |            ^^^^^^^^^^^
+  136 |         </ResponsiveContainer>
+  137 |       ) : (
+  138 |         <div className="h-full flex items-center justify-center text-gray-400">
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./components/ProgressionChart.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ProgressionChart.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+[05:30:40.258] Browser ERROR   ./components/ProgressionChart.tsx:135:11
+Parsing ecmascript source code failed
+  133 |   );
+  134 | }
+> 135 |           </LineChart>
+      |           ^
+  136 |         </ResponsiveContainer>
+  137 |       ) : (
+  138 |         <div className="h-full flex items-center justify-center text-gray-400">
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./components/ProgressionChart.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ProgressionChart.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+[05:30:40.258] Browser ERROR   ./components/ProgressionChart.tsx:135:12
+Parsing ecmascript source code failed
+  133 |   );
+  134 | }
+> 135 |           </LineChart>
+      |            ^^^^^^^^^^^
+  136 |         </ResponsiveContainer>
+  137 |       ) : (
+  138 |         <div className="h-full flex items-center justify-center text-gray-400">
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./components/ProgressionChart.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ProgressionChart.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+[05:30:40.726] Browser ERROR   ./components/ProgressionChart.tsx:135:11
+Parsing ecmascript source code failed
+  133 |   );
+  134 | }
+> 135 |           </LineChart>
+      |           ^
+  136 |         </ResponsiveContainer>
+  137 |       ) : (
+  138 |         <div className="h-full flex items-center justify-center text-gray-400">
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./components/ProgressionChart.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ProgressionChart.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+[05:30:40.726] Browser ERROR   ./components/ProgressionChart.tsx:135:12
+Parsing ecmascript source code failed
+  133 |   );
+  134 | }
+> 135 |           </LineChart>
+      |            ^^^^^^^^^^^
+  136 |         </ResponsiveContainer>
+  137 |       ) : (
+  138 |         <div className="h-full flex items-center justify-center text-gray-400">
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./components/ProgressionChart.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ProgressionChart.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+[05:30:40.726] Browser ERROR   ./components/ProgressionChart.tsx:135:11
+Parsing ecmascript source code failed
+  133 |   );
+  134 | }
+> 135 |           </LineChart>
+      |           ^
+  136 |         </ResponsiveContainer>
+  137 |       ) : (
+  138 |         <div className="h-full flex items-center justify-center text-gray-400">
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./components/ProgressionChart.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ProgressionChart.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+[05:30:40.726] Browser ERROR   ./components/ProgressionChart.tsx:135:12
+Parsing ecmascript source code failed
+  133 |   );
+  134 | }
+> 135 |           </LineChart>
+      |            ^^^^^^^^^^^
+  136 |         </ResponsiveContainer>
+  137 |       ) : (
+  138 |         <div className="h-full flex items-center justify-center text-gray-400">
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./components/ProgressionChart.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ProgressionChart.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+[05:30:40.726] Browser ERROR   ./components/ProgressionChart.tsx:135:11
+Parsing ecmascript source code failed
+  133 |   );
+  134 | }
+> 135 |           </LineChart>
+      |           ^
+  136 |         </ResponsiveContainer>
+  137 |       ) : (
+  138 |         <div className="h-full flex items-center justify-center text-gray-400">
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./components/ProgressionChart.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ProgressionChart.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+[05:30:40.726] Browser ERROR   ./components/ProgressionChart.tsx:135:12
+Parsing ecmascript source code failed
+  133 |   );
+  134 | }
+> 135 |           </LineChart>
+      |            ^^^^^^^^^^^
+  136 |         </ResponsiveContainer>
+  137 |       ) : (
+  138 |         <div className="h-full flex items-center justify-center text-gray-400">
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./components/ProgressionChart.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ProgressionChart.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+[05:30:40.842] Browser ERROR   ./components/ProgressionChart.tsx:135:11
+Parsing ecmascript source code failed
+  133 |   );
+  134 | }
+> 135 |           </LineChart>
+      |           ^
+  136 |         </ResponsiveContainer>
+  137 |       ) : (
+  138 |         <div className="h-full flex items-center justify-center text-gray-400">
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./components/ProgressionChart.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ProgressionChart.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+[05:30:40.842] Browser ERROR   ./components/ProgressionChart.tsx:135:12
+Parsing ecmascript source code failed
+  133 |   );
+  134 | }
+> 135 |           </LineChart>
+      |            ^^^^^^^^^^^
+  136 |         </ResponsiveContainer>
+  137 |       ) : (
+  138 |         <div className="h-full flex items-center justify-center text-gray-400">
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./components/ProgressionChart.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ProgressionChart.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+[05:30:40.842] Browser ERROR   ./components/ProgressionChart.tsx:135:11
+Parsing ecmascript source code failed
+  133 |   );
+  134 | }
+> 135 |           </LineChart>
+      |           ^
+  136 |         </ResponsiveContainer>
+  137 |       ) : (
+  138 |         <div className="h-full flex items-center justify-center text-gray-400">
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./components/ProgressionChart.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ProgressionChart.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+[05:30:40.842] Browser ERROR   ./components/ProgressionChart.tsx:135:12
+Parsing ecmascript source code failed
+  133 |   );
+  134 | }
+> 135 |           </LineChart>
+      |            ^^^^^^^^^^^
+  136 |         </ResponsiveContainer>
+  137 |       ) : (
+  138 |         <div className="h-full flex items-center justify-center text-gray-400">
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./components/ProgressionChart.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ProgressionChart.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+[05:30:40.842] Browser ERROR   ./components/ProgressionChart.tsx:135:11
+Parsing ecmascript source code failed
+  133 |   );
+  134 | }
+> 135 |           </LineChart>
+      |           ^
+  136 |         </ResponsiveContainer>
+  137 |       ) : (
+  138 |         <div className="h-full flex items-center justify-center text-gray-400">
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./components/ProgressionChart.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ProgressionChart.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+[05:30:40.842] Browser ERROR   ./components/ProgressionChart.tsx:135:12
+Parsing ecmascript source code failed
+  133 |   );
+  134 | }
+> 135 |           </LineChart>
+      |            ^^^^^^^^^^^
+  136 |         </ResponsiveContainer>
+  137 |       ) : (
+  138 |         <div className="h-full flex items-center justify-center text-gray-400">
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./components/ProgressionChart.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ProgressionChart.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+[05:30:40.842] Browser ERROR   ./components/ProgressionChart.tsx:135:11
+Parsing ecmascript source code failed
+  133 |   );
+  134 | }
+> 135 |           </LineChart>
+      |           ^
+  136 |         </ResponsiveContainer>
+  137 |       ) : (
+  138 |         <div className="h-full flex items-center justify-center text-gray-400">
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./components/ProgressionChart.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ProgressionChart.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+[05:30:40.842] Browser ERROR   ./components/ProgressionChart.tsx:135:12
+Parsing ecmascript source code failed
+  133 |   );
+  134 | }
+> 135 |           </LineChart>
+      |            ^^^^^^^^^^^
+  136 |         </ResponsiveContainer>
+  137 |       ) : (
+  138 |         <div className="h-full flex items-center justify-center text-gray-400">
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./components/ProgressionChart.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ProgressionChart.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+[05:30:40.842] Browser ERROR   ./components/ProgressionChart.tsx:135:11
+Parsing ecmascript source code failed
+  133 |   );
+  134 | }
+> 135 |           </LineChart>
+      |           ^
+  136 |         </ResponsiveContainer>
+  137 |       ) : (
+  138 |         <div className="h-full flex items-center justify-center text-gray-400">
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./components/ProgressionChart.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ProgressionChart.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+[05:30:40.842] Browser ERROR   ./components/ProgressionChart.tsx:135:12
+Parsing ecmascript source code failed
+  133 |   );
+  134 | }
+> 135 |           </LineChart>
+      |            ^^^^^^^^^^^
+  136 |         </ResponsiveContainer>
+  137 |       ) : (
+  138 |         <div className="h-full flex items-center justify-center text-gray-400">
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./components/ProgressionChart.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ProgressionChart.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+[05:30:40.926] Browser ERROR   ./components/ProgressionChart.tsx:135:11
+Parsing ecmascript source code failed
+  133 |   );
+  134 | }
+> 135 |           </LineChart>
+      |           ^
+  136 |         </ResponsiveContainer>
+  137 |       ) : (
+  138 |         <div className="h-full flex items-center justify-center text-gray-400">
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./components/ProgressionChart.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ProgressionChart.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+[05:30:40.926] Browser ERROR   ./components/ProgressionChart.tsx:135:12
+Parsing ecmascript source code failed
+  133 |   );
+  134 | }
+> 135 |           </LineChart>
+      |            ^^^^^^^^^^^
+  136 |         </ResponsiveContainer>
+  137 |       ) : (
+  138 |         <div className="h-full flex items-center justify-center text-gray-400">
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./components/ProgressionChart.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ProgressionChart.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+[05:30:41.012] Browser ERROR   [next-auth][error][CLIENT_FETCH_ERROR] 
+https://next-auth.js.org/errors#client_fetch_error The string did not match the expected pattern. {"error":{"message":"The string did not match the expected pattern.","name":"SyntaxError","stack":""},"message":"The string did not match the expected pattern.","url":"/api/auth/session"}
+[05:30:41.189] Server  LOG     prisma:query "SELECT 1"
+[05:30:41.195] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"name\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"resetToken\", \"public\".\"User\".\"resetTokenExpiry\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\", COALESCE(\"aggr_selection_0_ExerciseLog\".\"_aggr_count_logs\", 0) AS \"_aggr_count_logs\" FROM \"public\".\"User\" LEFT JOIN (SELECT \"public\".\"ExerciseLog\".\"userId\", COUNT(*) AS \"_aggr_count_logs\" FROM \"public\".\"ExerciseLog\" WHERE 1=1 GROUP BY \"public\".\"ExerciseLog\".\"userId\") AS \"aggr_selection_0_ExerciseLog\" ON (\"public\".\"User\".\"id\" = \"aggr_selection_0_ExerciseLog\".\"userId\") WHERE 1=1 ORDER BY \"public\".\"User\".\"createdAt\" DESC OFFSET $1"
+[05:30:41.199] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\", COALESCE(\"aggr_selection_0_ExerciseLog\".\"_aggr_count_logs\", 0) AS \"_aggr_count_logs\" FROM \"public\".\"Exercise\" LEFT JOIN (SELECT \"public\".\"ExerciseLog\".\"exerciseId\", COUNT(*) AS \"_aggr_count_logs\" FROM \"public\".\"ExerciseLog\" WHERE 1=1 GROUP BY \"public\".\"ExerciseLog\".\"exerciseId\") AS \"aggr_selection_0_ExerciseLog\" ON (\"public\".\"Exercise\".\"id\" = \"aggr_selection_0_ExerciseLog\".\"exerciseId\") WHERE 1=1 ORDER BY \"public\".\"Exercise\".\"name\" ASC OFFSET $1"
+[05:30:41.478] Browser ERROR   ./components/ProgressionChart.tsx:135:11
+Parsing ecmascript source code failed
+  133 |   );
+  134 | }
+> 135 |           </LineChart>
+      |           ^
+  136 |         </ResponsiveContainer>
+  137 |       ) : (
+  138 |         <div className="h-full flex items-center justify-center text-gray-400">
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./components/ProgressionChart.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ProgressionChart.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+[05:30:41.478] Browser ERROR   ./components/ProgressionChart.tsx:135:12
+Parsing ecmascript source code failed
+  133 |   );
+  134 | }
+> 135 |           </LineChart>
+      |            ^^^^^^^^^^^
+  136 |         </ResponsiveContainer>
+  137 |       ) : (
+  138 |         <div className="h-full flex items-center justify-center text-gray-400">
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./components/ProgressionChart.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ProgressionChart.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+[05:30:41.565] Browser ERROR   ./components/ProgressionChart.tsx:135:11
+Parsing ecmascript source code failed
+  133 |   );
+  134 | }
+> 135 |           </LineChart>
+      |           ^
+  136 |         </ResponsiveContainer>
+  137 |       ) : (
+  138 |         <div className="h-full flex items-center justify-center text-gray-400">
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./components/ProgressionChart.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ProgressionChart.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+[05:30:41.565] Browser ERROR   ./components/ProgressionChart.tsx:135:12
+Parsing ecmascript source code failed
+  133 |   );
+  134 | }
+> 135 |           </LineChart>
+      |            ^^^^^^^^^^^
+  136 |         </ResponsiveContainer>
+  137 |       ) : (
+  138 |         <div className="h-full flex items-center justify-center text-gray-400">
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./components/ProgressionChart.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ProgressionChart.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+[05:30:41.565] Browser ERROR   ./components/ProgressionChart.tsx:135:11
+Parsing ecmascript source code failed
+  133 |   );
+  134 | }
+> 135 |           </LineChart>
+      |           ^
+  136 |         </ResponsiveContainer>
+  137 |       ) : (
+  138 |         <div className="h-full flex items-center justify-center text-gray-400">
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./components/ProgressionChart.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/admin/users/[id]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ProgressionChart.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/admin/users/[id]/page.tsx [Server Component]
+[05:30:41.565] Browser ERROR   ./components/ProgressionChart.tsx:135:12
+Parsing ecmascript source code failed
+  133 |   );
+  134 | }
+> 135 |           </LineChart>
+      |            ^^^^^^^^^^^
+  136 |         </ResponsiveContainer>
+  137 |       ) : (
+  138 |         <div className="h-full flex items-center justify-center text-gray-400">
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./components/ProgressionChart.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/admin/users/[id]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ProgressionChart.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/admin/users/[id]/page.tsx [Server Component]
+[05:30:41.565] Browser ERROR   ./components/ProgressionChart.tsx:135:11
+Parsing ecmascript source code failed
+  133 |   );
+  134 | }
+> 135 |           </LineChart>
+      |           ^
+  136 |         </ResponsiveContainer>
+  137 |       ) : (
+  138 |         <div className="h-full flex items-center justify-center text-gray-400">
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./components/ProgressionChart.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ProgressionChart.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+[05:30:41.565] Browser ERROR   ./components/ProgressionChart.tsx:135:12
+Parsing ecmascript source code failed
+  133 |   );
+  134 | }
+> 135 |           </LineChart>
+      |            ^^^^^^^^^^^
+  136 |         </ResponsiveContainer>
+  137 |       ) : (
+  138 |         <div className="h-full flex items-center justify-center text-gray-400">
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./components/ProgressionChart.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ProgressionChart.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+[05:30:41.565] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/admin" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="en">
+                          <body
+                            className="geist_a71539c9-module__T19VSG__variable geist_mono_8d43a2aa-module__8Li5zG__var..."
+-                           style={{overflow-x:"hidden",overflow-y:"hidden"}}
+                          >
+                  ...
+
+[05:30:41.565] Browser ERROR   [next-auth][error][CLIENT_FETCH_ERROR] 
+https://next-auth.js.org/errors#client_fetch_error The string did not match the expected pattern. {"error":{"message":"The string did not match the expected pattern.","name":"SyntaxError","stack":"json@[native code]\n@http://localhost:3000/_next/static/chunks/node_modules_d667f843._.js:496:30\n@http://localhost:3000/_next/static/chunks/node_modules_d667f843._.js:320:67\n@http://localhost:3000/_next/static/chunks/node_modules_d667f843._.js:269:36\nasyncGeneratorStep@http://localhost:3000/_next/static/chunks/node_modules_d667f843._.js:581:21\n_next@http://localhost:3000/_next/static/chunks/node_modules_d667f843._.js:593:35"},"message":"The string did not match the expected pattern.","url":"/api/auth/session"}
+[05:30:41.565] Browser ERROR   ./components/ProgressionChart.tsx:135:11
+Parsing ecmascript source code failed
+  133 |   );
+  134 | }
+> 135 |           </LineChart>
+      |           ^
+  136 |         </ResponsiveContainer>
+  137 |       ) : (
+  138 |         <div className="h-full flex items-center justify-center text-gray-400">
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./components/ProgressionChart.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ProgressionChart.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+[05:30:41.565] Browser ERROR   ./components/ProgressionChart.tsx:135:12
+Parsing ecmascript source code failed
+  133 |   );
+  134 | }
+> 135 |           </LineChart>
+      |            ^^^^^^^^^^^
+  136 |         </ResponsiveContainer>
+  137 |       ) : (
+  138 |         <div className="h-full flex items-center justify-center text-gray-400">
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./components/ProgressionChart.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ProgressionChart.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+[05:30:41.677] Browser ERROR   ./components/ProgressionChart.tsx:135:11
+Parsing ecmascript source code failed
+  133 |   );
+  134 | }
+> 135 |           </LineChart>
+      |           ^
+  136 |         </ResponsiveContainer>
+  137 |       ) : (
+  138 |         <div className="h-full flex items-center justify-center text-gray-400">
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./components/ProgressionChart.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ProgressionChart.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+[05:30:41.677] Browser ERROR   ./components/ProgressionChart.tsx:135:12
+Parsing ecmascript source code failed
+  133 |   );
+  134 | }
+> 135 |           </LineChart>
+      |            ^^^^^^^^^^^
+  136 |         </ResponsiveContainer>
+  137 |       ) : (
+  138 |         <div className="h-full flex items-center justify-center text-gray-400">
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./components/ProgressionChart.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ProgressionChart.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+[05:30:41.677] Browser ERROR   ./components/ProgressionChart.tsx:135:11
+Parsing ecmascript source code failed
+  133 |   );
+  134 | }
+> 135 |           </LineChart>
+      |           ^
+  136 |         </ResponsiveContainer>
+  137 |       ) : (
+  138 |         <div className="h-full flex items-center justify-center text-gray-400">
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./components/ProgressionChart.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ProgressionChart.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+[05:30:41.677] Browser ERROR   ./components/ProgressionChart.tsx:135:12
+Parsing ecmascript source code failed
+  133 |   );
+  134 | }
+> 135 |           </LineChart>
+      |            ^^^^^^^^^^^
+  136 |         </ResponsiveContainer>
+  137 |       ) : (
+  138 |         <div className="h-full flex items-center justify-center text-gray-400">
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./components/ProgressionChart.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ProgressionChart.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+[05:30:41.847] Browser ERROR   ./components/ProgressionChart.tsx:135:11
+Parsing ecmascript source code failed
+  133 |   );
+  134 | }
+> 135 |           </LineChart>
+      |           ^
+  136 |         </ResponsiveContainer>
+  137 |       ) : (
+  138 |         <div className="h-full flex items-center justify-center text-gray-400">
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./components/ProgressionChart.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ProgressionChart.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+[05:30:41.847] Browser ERROR   ./components/ProgressionChart.tsx:135:12
+Parsing ecmascript source code failed
+  133 |   );
+  134 | }
+> 135 |           </LineChart>
+      |            ^^^^^^^^^^^
+  136 |         </ResponsiveContainer>
+  137 |       ) : (
+  138 |         <div className="h-full flex items-center justify-center text-gray-400">
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./components/ProgressionChart.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ProgressionChart.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+[05:30:41.847] Browser ERROR   ./components/ProgressionChart.tsx:135:11
+Parsing ecmascript source code failed
+  133 |   );
+  134 | }
+> 135 |           </LineChart>
+      |           ^
+  136 |         </ResponsiveContainer>
+  137 |       ) : (
+  138 |         <div className="h-full flex items-center justify-center text-gray-400">
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./components/ProgressionChart.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ProgressionChart.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+[05:30:41.847] Browser ERROR   ./components/ProgressionChart.tsx:135:12
+Parsing ecmascript source code failed
+  133 |   );
+  134 | }
+> 135 |           </LineChart>
+      |            ^^^^^^^^^^^
+  136 |         </ResponsiveContainer>
+  137 |       ) : (
+  138 |         <div className="h-full flex items-center justify-center text-gray-400">
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./components/ProgressionChart.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ProgressionChart.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+[05:30:41.847] Browser ERROR   ./components/ProgressionChart.tsx:135:11
+Parsing ecmascript source code failed
+  133 |   );
+  134 | }
+> 135 |           </LineChart>
+      |           ^
+  136 |         </ResponsiveContainer>
+  137 |       ) : (
+  138 |         <div className="h-full flex items-center justify-center text-gray-400">
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./components/ProgressionChart.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ProgressionChart.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+[05:30:41.847] Browser ERROR   ./components/ProgressionChart.tsx:135:12
+Parsing ecmascript source code failed
+  133 |   );
+  134 | }
+> 135 |           </LineChart>
+      |            ^^^^^^^^^^^
+  136 |         </ResponsiveContainer>
+  137 |       ) : (
+  138 |         <div className="h-full flex items-center justify-center text-gray-400">
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./components/ProgressionChart.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ProgressionChart.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+[05:30:51.121] Browser ERROR   [next-auth][error][CLIENT_FETCH_ERROR] 
+https://next-auth.js.org/errors#client_fetch_error The string did not match the expected pattern. {"error":{"message":"The string did not match the expected pattern.","name":"SyntaxError","stack":""},"message":"The string did not match the expected pattern.","url":"/api/auth/session"}
+[05:30:51.121] Browser ERROR   ./components/ProgressionChart.tsx:135:11
+Parsing ecmascript source code failed
+  133 |   );
+  134 | }
+> 135 |           </LineChart>
+      |           ^
+  136 |         </ResponsiveContainer>
+  137 |       ) : (
+  138 |         <div className="h-full flex items-center justify-center text-gray-400">
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./components/ProgressionChart.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ProgressionChart.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+[05:30:51.121] Browser ERROR   ./components/ProgressionChart.tsx:135:12
+Parsing ecmascript source code failed
+  133 |   );
+  134 | }
+> 135 |           </LineChart>
+      |            ^^^^^^^^^^^
+  136 |         </ResponsiveContainer>
+  137 |       ) : (
+  138 |         <div className="h-full flex items-center justify-center text-gray-400">
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./components/ProgressionChart.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ProgressionChart.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+[05:30:51.121] Browser ERROR   ./components/ProgressionChart.tsx:135:11
+Parsing ecmascript source code failed
+  133 |   );
+  134 | }
+> 135 |           </LineChart>
+      |           ^
+  136 |         </ResponsiveContainer>
+  137 |       ) : (
+  138 |         <div className="h-full flex items-center justify-center text-gray-400">
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./components/ProgressionChart.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ProgressionChart.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+[05:30:51.121] Browser ERROR   ./components/ProgressionChart.tsx:135:12
+Parsing ecmascript source code failed
+  133 |   );
+  134 | }
+> 135 |           </LineChart>
+      |            ^^^^^^^^^^^
+  136 |         </ResponsiveContainer>
+  137 |       ) : (
+  138 |         <div className="h-full flex items-center justify-center text-gray-400">
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./components/ProgressionChart.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ProgressionChart.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+[05:30:51.176] Browser ERROR   ./components/ProgressionChart.tsx:135:11
+Parsing ecmascript source code failed
+  133 |   );
+  134 | }
+> 135 |           </LineChart>
+      |           ^
+  136 |         </ResponsiveContainer>
+  137 |       ) : (
+  138 |         <div className="h-full flex items-center justify-center text-gray-400">
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./components/ProgressionChart.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ProgressionChart.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+[05:30:51.176] Browser ERROR   ./components/ProgressionChart.tsx:135:12
+Parsing ecmascript source code failed
+  133 |   );
+  134 | }
+> 135 |           </LineChart>
+      |            ^^^^^^^^^^^
+  136 |         </ResponsiveContainer>
+  137 |       ) : (
+  138 |         <div className="h-full flex items-center justify-center text-gray-400">
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./components/ProgressionChart.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ProgressionChart.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+[05:30:51.176] Browser ERROR   ./components/ProgressionChart.tsx:135:11
+Parsing ecmascript source code failed
+  133 |   );
+  134 | }
+> 135 |           </LineChart>
+      |           ^
+  136 |         </ResponsiveContainer>
+  137 |       ) : (
+  138 |         <div className="h-full flex items-center justify-center text-gray-400">
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./components/ProgressionChart.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ProgressionChart.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+[05:30:51.176] Browser ERROR   ./components/ProgressionChart.tsx:135:12
+Parsing ecmascript source code failed
+  133 |   );
+  134 | }
+> 135 |           </LineChart>
+      |            ^^^^^^^^^^^
+  136 |         </ResponsiveContainer>
+  137 |       ) : (
+  138 |         <div className="h-full flex items-center justify-center text-gray-400">
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./components/ProgressionChart.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ProgressionChart.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+[05:30:51.842] Browser ERROR   ./components/ProgressionChart.tsx:135:11
+Parsing ecmascript source code failed
+  133 |   );
+  134 | }
+> 135 |           </LineChart>
+      |           ^
+  136 |         </ResponsiveContainer>
+  137 |       ) : (
+  138 |         <div className="h-full flex items-center justify-center text-gray-400">
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./components/ProgressionChart.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ProgressionChart.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+[05:30:51.842] Browser ERROR   ./components/ProgressionChart.tsx:135:12
+Parsing ecmascript source code failed
+  133 |   );
+  134 | }
+> 135 |           </LineChart>
+      |            ^^^^^^^^^^^
+  136 |         </ResponsiveContainer>
+  137 |       ) : (
+  138 |         <div className="h-full flex items-center justify-center text-gray-400">
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./components/ProgressionChart.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ProgressionChart.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+[05:30:51.842] Browser ERROR   ./components/ProgressionChart.tsx:135:11
+Parsing ecmascript source code failed
+  133 |   );
+  134 | }
+> 135 |           </LineChart>
+      |           ^
+  136 |         </ResponsiveContainer>
+  137 |       ) : (
+  138 |         <div className="h-full flex items-center justify-center text-gray-400">
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./components/ProgressionChart.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ProgressionChart.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+[05:30:51.842] Browser ERROR   ./components/ProgressionChart.tsx:135:12
+Parsing ecmascript source code failed
+  133 |   );
+  134 | }
+> 135 |           </LineChart>
+      |            ^^^^^^^^^^^
+  136 |         </ResponsiveContainer>
+  137 |       ) : (
+  138 |         <div className="h-full flex items-center justify-center text-gray-400">
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./components/ProgressionChart.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Client Component Browser]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ProgressionChart.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Client Component SSR]
+    ./components/DashboardClient.tsx [Server Component]
+    ./app/dashboard/page.tsx [Server Component]
+[05:31:17.525] Server  LOG     prisma:query "SELECT 1"
+[05:31:17.525] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"name\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"resetToken\", \"public\".\"User\".\"resetTokenExpiry\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE (\"public\".\"User\".\"email\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[05:31:17.529] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE 1=1 ORDER BY \"public\".\"Exercise\".\"name\" ASC OFFSET $1"
+[05:31:17.647] Server  LOG     prisma:query "SELECT \"public\".\"ExerciseLog\".\"id\", \"public\".\"ExerciseLog\".\"weight\", \"public\".\"ExerciseLog\".\"reps\", \"public\".\"ExerciseLog\".\"sets\", \"public\".\"ExerciseLog\".\"rpe\", \"public\".\"ExerciseLog\".\"estimated1RM\", \"public\".\"ExerciseLog\".\"date\", \"public\".\"ExerciseLog\".\"userId\", \"public\".\"ExerciseLog\".\"exerciseId\", \"public\".\"ExerciseLog\".\"createdAt\", \"public\".\"ExerciseLog\".\"updatedAt\" FROM \"public\".\"ExerciseLog\" WHERE \"public\".\"ExerciseLog\".\"userId\" = $1 ORDER BY \"public\".\"ExerciseLog\".\"date\" DESC LIMIT $2 OFFSET $3"
+[05:31:17.647] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE \"public\".\"Exercise\".\"id\" IN ($1,$2) OFFSET $3"
+[05:31:17.653] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"name\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"resetToken\", \"public\".\"User\".\"resetTokenExpiry\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\", COALESCE(\"aggr_selection_0_ExerciseLog\".\"_aggr_count_logs\", 0) AS \"_aggr_count_logs\" FROM \"public\".\"User\" LEFT JOIN (SELECT \"public\".\"ExerciseLog\".\"userId\", COUNT(*) AS \"_aggr_count_logs\" FROM \"public\".\"ExerciseLog\" WHERE 1=1 GROUP BY \"public\".\"ExerciseLog\".\"userId\") AS \"aggr_selection_0_ExerciseLog\" ON (\"public\".\"User\".\"id\" = \"aggr_selection_0_ExerciseLog\".\"userId\") WHERE 1=1 ORDER BY \"public\".\"User\".\"createdAt\" DESC OFFSET $1"
+[05:31:17.654] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"name\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"resetToken\", \"public\".\"User\".\"resetTokenExpiry\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE (\"public\".\"User\".\"id\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[05:31:17.654] Server  LOG     prisma:query "SELECT 1"
+[05:31:17.656] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE 1=1 ORDER BY \"public\".\"Exercise\".\"name\" ASC OFFSET $1"
+[05:31:17.677] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\", COALESCE(\"aggr_selection_0_ExerciseLog\".\"_aggr_count_logs\", 0) AS \"_aggr_count_logs\" FROM \"public\".\"Exercise\" LEFT JOIN (SELECT \"public\".\"ExerciseLog\".\"exerciseId\", COUNT(*) AS \"_aggr_count_logs\" FROM \"public\".\"ExerciseLog\" WHERE 1=1 GROUP BY \"public\".\"ExerciseLog\".\"exerciseId\") AS \"aggr_selection_0_ExerciseLog\" ON (\"public\".\"Exercise\".\"id\" = \"aggr_selection_0_ExerciseLog\".\"exerciseId\") WHERE 1=1 ORDER BY \"public\".\"Exercise\".\"name\" ASC OFFSET $1"
+[05:31:17.681] Server  LOG     prisma:query "SELECT \"public\".\"ExerciseLog\".\"id\", \"public\".\"ExerciseLog\".\"weight\", \"public\".\"ExerciseLog\".\"reps\", \"public\".\"ExerciseLog\".\"sets\", \"public\".\"ExerciseLog\".\"rpe\", \"public\".\"ExerciseLog\".\"estimated1RM\", \"public\".\"ExerciseLog\".\"date\", \"public\".\"ExerciseLog\".\"userId\", \"public\".\"ExerciseLog\".\"exerciseId\", \"public\".\"ExerciseLog\".\"createdAt\", \"public\".\"ExerciseLog\".\"updatedAt\" FROM \"public\".\"ExerciseLog\" WHERE \"public\".\"ExerciseLog\".\"userId\" = $1 ORDER BY \"public\".\"ExerciseLog\".\"date\" DESC LIMIT $2 OFFSET $3"
+[05:31:17.681] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE \"public\".\"Exercise\".\"id\" IN ($1,$2) OFFSET $3"
+[05:31:17.689] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"name\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"resetToken\", \"public\".\"User\".\"resetTokenExpiry\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE (\"public\".\"User\".\"email\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[05:31:17.691] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE 1=1 ORDER BY \"public\".\"Exercise\".\"name\" ASC OFFSET $1"
+[05:31:17.692] Server  LOG     prisma:query "SELECT \"public\".\"ExerciseLog\".\"id\", \"public\".\"ExerciseLog\".\"weight\", \"public\".\"ExerciseLog\".\"reps\", \"public\".\"ExerciseLog\".\"sets\", \"public\".\"ExerciseLog\".\"rpe\", \"public\".\"ExerciseLog\".\"estimated1RM\", \"public\".\"ExerciseLog\".\"date\", \"public\".\"ExerciseLog\".\"userId\", \"public\".\"ExerciseLog\".\"exerciseId\", \"public\".\"ExerciseLog\".\"createdAt\", \"public\".\"ExerciseLog\".\"updatedAt\" FROM \"public\".\"ExerciseLog\" WHERE \"public\".\"ExerciseLog\".\"userId\" = $1 ORDER BY \"public\".\"ExerciseLog\".\"date\" DESC LIMIT $2 OFFSET $3"
+[05:31:17.693] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE \"public\".\"Exercise\".\"id\" IN ($1,$2) OFFSET $3"
+[05:31:17.748] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"name\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"resetToken\", \"public\".\"User\".\"resetTokenExpiry\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\", COALESCE(\"aggr_selection_0_ExerciseLog\".\"_aggr_count_logs\", 0) AS \"_aggr_count_logs\" FROM \"public\".\"User\" LEFT JOIN (SELECT \"public\".\"ExerciseLog\".\"userId\", COUNT(*) AS \"_aggr_count_logs\" FROM \"public\".\"ExerciseLog\" WHERE 1=1 GROUP BY \"public\".\"ExerciseLog\".\"userId\") AS \"aggr_selection_0_ExerciseLog\" ON (\"public\".\"User\".\"id\" = \"aggr_selection_0_ExerciseLog\".\"userId\") WHERE 1=1 ORDER BY \"public\".\"User\".\"createdAt\" DESC OFFSET $1"
+[05:31:17.773] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\", COALESCE(\"aggr_selection_0_ExerciseLog\".\"_aggr_count_logs\", 0) AS \"_aggr_count_logs\" FROM \"public\".\"Exercise\" LEFT JOIN (SELECT \"public\".\"ExerciseLog\".\"exerciseId\", COUNT(*) AS \"_aggr_count_logs\" FROM \"public\".\"ExerciseLog\" WHERE 1=1 GROUP BY \"public\".\"ExerciseLog\".\"exerciseId\") AS \"aggr_selection_0_ExerciseLog\" ON (\"public\".\"Exercise\".\"id\" = \"aggr_selection_0_ExerciseLog\".\"exerciseId\") WHERE 1=1 ORDER BY \"public\".\"Exercise\".\"name\" ASC OFFSET $1"
+[05:31:17.796] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"name\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"resetToken\", \"public\".\"User\".\"resetTokenExpiry\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE (\"public\".\"User\".\"id\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[05:31:17.801] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE 1=1 ORDER BY \"public\".\"Exercise\".\"name\" ASC OFFSET $1"
+[05:31:17.806] Server  LOG     prisma:query "SELECT \"public\".\"ExerciseLog\".\"id\", \"public\".\"ExerciseLog\".\"weight\", \"public\".\"ExerciseLog\".\"reps\", \"public\".\"ExerciseLog\".\"sets\", \"public\".\"ExerciseLog\".\"rpe\", \"public\".\"ExerciseLog\".\"estimated1RM\", \"public\".\"ExerciseLog\".\"date\", \"public\".\"ExerciseLog\".\"userId\", \"public\".\"ExerciseLog\".\"exerciseId\", \"public\".\"ExerciseLog\".\"createdAt\", \"public\".\"ExerciseLog\".\"updatedAt\" FROM \"public\".\"ExerciseLog\" WHERE \"public\".\"ExerciseLog\".\"userId\" = $1 ORDER BY \"public\".\"ExerciseLog\".\"date\" DESC LIMIT $2 OFFSET $3"
+[05:31:17.809] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE \"public\".\"Exercise\".\"id\" IN ($1,$2) OFFSET $3"
+[05:31:32.024] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"name\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"resetToken\", \"public\".\"User\".\"resetTokenExpiry\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE (\"public\".\"User\".\"id\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[05:31:32.025] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE 1=1 ORDER BY \"public\".\"Exercise\".\"name\" ASC OFFSET $1"
+[05:31:32.026] Server  LOG     prisma:query "SELECT \"public\".\"ExerciseLog\".\"id\", \"public\".\"ExerciseLog\".\"weight\", \"public\".\"ExerciseLog\".\"reps\", \"public\".\"ExerciseLog\".\"sets\", \"public\".\"ExerciseLog\".\"rpe\", \"public\".\"ExerciseLog\".\"estimated1RM\", \"public\".\"ExerciseLog\".\"date\", \"public\".\"ExerciseLog\".\"userId\", \"public\".\"ExerciseLog\".\"exerciseId\", \"public\".\"ExerciseLog\".\"createdAt\", \"public\".\"ExerciseLog\".\"updatedAt\" FROM \"public\".\"ExerciseLog\" WHERE \"public\".\"ExerciseLog\".\"userId\" = $1 ORDER BY \"public\".\"ExerciseLog\".\"date\" DESC LIMIT $2 OFFSET $3"
+[05:31:32.027] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE \"public\".\"Exercise\".\"id\" IN ($1,$2) OFFSET $3"
+[05:31:32.185] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(85%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[05:31:32.185] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(85%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[05:32:21.101] Server  LOG     prisma:query "SELECT 1"
+[05:32:21.102] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"name\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"resetToken\", \"public\".\"User\".\"resetTokenExpiry\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE (\"public\".\"User\".\"id\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[05:32:21.103] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE 1=1 ORDER BY \"public\".\"Exercise\".\"name\" ASC OFFSET $1"
+[05:32:21.103] Server  LOG     prisma:query "SELECT \"public\".\"ExerciseLog\".\"id\", \"public\".\"ExerciseLog\".\"weight\", \"public\".\"ExerciseLog\".\"reps\", \"public\".\"ExerciseLog\".\"sets\", \"public\".\"ExerciseLog\".\"rpe\", \"public\".\"ExerciseLog\".\"estimated1RM\", \"public\".\"ExerciseLog\".\"date\", \"public\".\"ExerciseLog\".\"userId\", \"public\".\"ExerciseLog\".\"exerciseId\", \"public\".\"ExerciseLog\".\"createdAt\", \"public\".\"ExerciseLog\".\"updatedAt\" FROM \"public\".\"ExerciseLog\" WHERE \"public\".\"ExerciseLog\".\"userId\" = $1 ORDER BY \"public\".\"ExerciseLog\".\"date\" DESC LIMIT $2 OFFSET $3"
+[05:32:21.104] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE \"public\".\"Exercise\".\"id\" IN ($1,$2) OFFSET $3"
+[05:32:21.168] Server  WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(85%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[05:32:21.410] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(85%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[05:32:21.410] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(85%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[05:32:23.681] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"name\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"resetToken\", \"public\".\"User\".\"resetTokenExpiry\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE (\"public\".\"User\".\"email\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[05:32:23.682] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE 1=1 ORDER BY \"public\".\"Exercise\".\"name\" ASC OFFSET $1"
+[05:32:23.685] Server  LOG     prisma:query "SELECT \"public\".\"ExerciseLog\".\"id\", \"public\".\"ExerciseLog\".\"weight\", \"public\".\"ExerciseLog\".\"reps\", \"public\".\"ExerciseLog\".\"sets\", \"public\".\"ExerciseLog\".\"rpe\", \"public\".\"ExerciseLog\".\"estimated1RM\", \"public\".\"ExerciseLog\".\"date\", \"public\".\"ExerciseLog\".\"userId\", \"public\".\"ExerciseLog\".\"exerciseId\", \"public\".\"ExerciseLog\".\"createdAt\", \"public\".\"ExerciseLog\".\"updatedAt\" FROM \"public\".\"ExerciseLog\" WHERE \"public\".\"ExerciseLog\".\"userId\" = $1 ORDER BY \"public\".\"ExerciseLog\".\"date\" DESC LIMIT $2 OFFSET $3"
+[05:32:24.979] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE 1=1 ORDER BY \"public\".\"Exercise\".\"createdAt\" DESC OFFSET $1"
+[05:32:25.884] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"name\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"resetToken\", \"public\".\"User\".\"resetTokenExpiry\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE (\"public\".\"User\".\"email\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[05:32:25.887] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE 1=1 ORDER BY \"public\".\"Exercise\".\"name\" ASC OFFSET $1"
+[05:32:25.893] Server  LOG     prisma:query "SELECT \"public\".\"ExerciseLog\".\"id\", \"public\".\"ExerciseLog\".\"weight\", \"public\".\"ExerciseLog\".\"reps\", \"public\".\"ExerciseLog\".\"sets\", \"public\".\"ExerciseLog\".\"rpe\", \"public\".\"ExerciseLog\".\"estimated1RM\", \"public\".\"ExerciseLog\".\"date\", \"public\".\"ExerciseLog\".\"userId\", \"public\".\"ExerciseLog\".\"exerciseId\", \"public\".\"ExerciseLog\".\"createdAt\", \"public\".\"ExerciseLog\".\"updatedAt\" FROM \"public\".\"ExerciseLog\" WHERE \"public\".\"ExerciseLog\".\"userId\" = $1 ORDER BY \"public\".\"ExerciseLog\".\"date\" DESC LIMIT $2 OFFSET $3"
+[05:32:26.446] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"name\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"resetToken\", \"public\".\"User\".\"resetTokenExpiry\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\", COALESCE(\"aggr_selection_0_ExerciseLog\".\"_aggr_count_logs\", 0) AS \"_aggr_count_logs\" FROM \"public\".\"User\" LEFT JOIN (SELECT \"public\".\"ExerciseLog\".\"userId\", COUNT(*) AS \"_aggr_count_logs\" FROM \"public\".\"ExerciseLog\" WHERE 1=1 GROUP BY \"public\".\"ExerciseLog\".\"userId\") AS \"aggr_selection_0_ExerciseLog\" ON (\"public\".\"User\".\"id\" = \"aggr_selection_0_ExerciseLog\".\"userId\") WHERE 1=1 ORDER BY \"public\".\"User\".\"createdAt\" DESC OFFSET $1"
+[05:32:26.448] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\", COALESCE(\"aggr_selection_0_ExerciseLog\".\"_aggr_count_logs\", 0) AS \"_aggr_count_logs\" FROM \"public\".\"Exercise\" LEFT JOIN (SELECT \"public\".\"ExerciseLog\".\"exerciseId\", COUNT(*) AS \"_aggr_count_logs\" FROM \"public\".\"ExerciseLog\" WHERE 1=1 GROUP BY \"public\".\"ExerciseLog\".\"exerciseId\") AS \"aggr_selection_0_ExerciseLog\" ON (\"public\".\"Exercise\".\"id\" = \"aggr_selection_0_ExerciseLog\".\"exerciseId\") WHERE 1=1 ORDER BY \"public\".\"Exercise\".\"name\" ASC OFFSET $1"
+[05:32:28.525] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"name\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"resetToken\", \"public\".\"User\".\"resetTokenExpiry\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE (\"public\".\"User\".\"email\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[05:32:28.526] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE 1=1 ORDER BY \"public\".\"Exercise\".\"name\" ASC OFFSET $1"
+[05:32:28.527] Server  LOG     prisma:query "SELECT \"public\".\"ExerciseLog\".\"id\", \"public\".\"ExerciseLog\".\"weight\", \"public\".\"ExerciseLog\".\"reps\", \"public\".\"ExerciseLog\".\"sets\", \"public\".\"ExerciseLog\".\"rpe\", \"public\".\"ExerciseLog\".\"estimated1RM\", \"public\".\"ExerciseLog\".\"date\", \"public\".\"ExerciseLog\".\"userId\", \"public\".\"ExerciseLog\".\"exerciseId\", \"public\".\"ExerciseLog\".\"createdAt\", \"public\".\"ExerciseLog\".\"updatedAt\" FROM \"public\".\"ExerciseLog\" WHERE \"public\".\"ExerciseLog\".\"userId\" = $1 ORDER BY \"public\".\"ExerciseLog\".\"date\" DESC LIMIT $2 OFFSET $3"
+[05:32:32.944] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE 1=1 ORDER BY \"public\".\"Exercise\".\"createdAt\" DESC OFFSET $1"
+[05:32:33.577] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"name\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"resetToken\", \"public\".\"User\".\"resetTokenExpiry\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\", COALESCE(\"aggr_selection_0_ExerciseLog\".\"_aggr_count_logs\", 0) AS \"_aggr_count_logs\" FROM \"public\".\"User\" LEFT JOIN (SELECT \"public\".\"ExerciseLog\".\"userId\", COUNT(*) AS \"_aggr_count_logs\" FROM \"public\".\"ExerciseLog\" WHERE 1=1 GROUP BY \"public\".\"ExerciseLog\".\"userId\") AS \"aggr_selection_0_ExerciseLog\" ON (\"public\".\"User\".\"id\" = \"aggr_selection_0_ExerciseLog\".\"userId\") WHERE 1=1 ORDER BY \"public\".\"User\".\"createdAt\" DESC OFFSET $1"
+[05:32:33.579] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\", COALESCE(\"aggr_selection_0_ExerciseLog\".\"_aggr_count_logs\", 0) AS \"_aggr_count_logs\" FROM \"public\".\"Exercise\" LEFT JOIN (SELECT \"public\".\"ExerciseLog\".\"exerciseId\", COUNT(*) AS \"_aggr_count_logs\" FROM \"public\".\"ExerciseLog\" WHERE 1=1 GROUP BY \"public\".\"ExerciseLog\".\"exerciseId\") AS \"aggr_selection_0_ExerciseLog\" ON (\"public\".\"Exercise\".\"id\" = \"aggr_selection_0_ExerciseLog\".\"exerciseId\") WHERE 1=1 ORDER BY \"public\".\"Exercise\".\"name\" ASC OFFSET $1"
+[05:32:53.552] Server  LOG     prisma:query "SELECT 1"
+[05:32:53.553] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"name\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"resetToken\", \"public\".\"User\".\"resetTokenExpiry\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE (\"public\".\"User\".\"email\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[05:32:53.657] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"name\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"resetToken\", \"public\".\"User\".\"resetTokenExpiry\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE (\"public\".\"User\".\"email\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[05:32:53.659] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE 1=1 ORDER BY \"public\".\"Exercise\".\"name\" ASC OFFSET $1"
+[05:32:53.660] Server  LOG     prisma:query "SELECT \"public\".\"ExerciseLog\".\"id\", \"public\".\"ExerciseLog\".\"weight\", \"public\".\"ExerciseLog\".\"reps\", \"public\".\"ExerciseLog\".\"sets\", \"public\".\"ExerciseLog\".\"rpe\", \"public\".\"ExerciseLog\".\"estimated1RM\", \"public\".\"ExerciseLog\".\"date\", \"public\".\"ExerciseLog\".\"userId\", \"public\".\"ExerciseLog\".\"exerciseId\", \"public\".\"ExerciseLog\".\"createdAt\", \"public\".\"ExerciseLog\".\"updatedAt\" FROM \"public\".\"ExerciseLog\" WHERE \"public\".\"ExerciseLog\".\"userId\" = $1 ORDER BY \"public\".\"ExerciseLog\".\"date\" DESC LIMIT $2 OFFSET $3"
+[05:32:53.661] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE \"public\".\"Exercise\".\"id\" IN ($1,$2) OFFSET $3"
+[05:32:53.789] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(85%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[05:32:53.789] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(85%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[05:52:05.764] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"name\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"resetToken\", \"public\".\"User\".\"resetTokenExpiry\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE (\"public\".\"User\".\"email\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[05:52:05.770] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE 1=1 ORDER BY \"public\".\"Exercise\".\"name\" ASC OFFSET $1"
+[05:52:05.773] Server  LOG     prisma:query "SELECT \"public\".\"ExerciseLog\".\"id\", \"public\".\"ExerciseLog\".\"weight\", \"public\".\"ExerciseLog\".\"reps\", \"public\".\"ExerciseLog\".\"sets\", \"public\".\"ExerciseLog\".\"rpe\", \"public\".\"ExerciseLog\".\"estimated1RM\", \"public\".\"ExerciseLog\".\"date\", \"public\".\"ExerciseLog\".\"userId\", \"public\".\"ExerciseLog\".\"exerciseId\", \"public\".\"ExerciseLog\".\"createdAt\", \"public\".\"ExerciseLog\".\"updatedAt\" FROM \"public\".\"ExerciseLog\" WHERE \"public\".\"ExerciseLog\".\"userId\" = $1 ORDER BY \"public\".\"ExerciseLog\".\"date\" DESC LIMIT $2 OFFSET $3"
+[05:52:05.775] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE \"public\".\"Exercise\".\"id\" IN ($1,$2) OFFSET $3"
+[05:52:05.792] Server  WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(85%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[05:52:06.113] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(85%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[05:52:06.113] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(85%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[05:55:13.971] Server  LOG     prisma:query "SELECT 1"
+[05:55:13.973] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"name\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"resetToken\", \"public\".\"User\".\"resetTokenExpiry\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE (\"public\".\"User\".\"email\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[05:55:13.974] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE 1=1 ORDER BY \"public\".\"Exercise\".\"name\" ASC OFFSET $1"
+[05:55:13.976] Server  LOG     prisma:query "SELECT \"public\".\"ExerciseLog\".\"id\", \"public\".\"ExerciseLog\".\"weight\", \"public\".\"ExerciseLog\".\"reps\", \"public\".\"ExerciseLog\".\"sets\", \"public\".\"ExerciseLog\".\"rpe\", \"public\".\"ExerciseLog\".\"estimated1RM\", \"public\".\"ExerciseLog\".\"date\", \"public\".\"ExerciseLog\".\"userId\", \"public\".\"ExerciseLog\".\"exerciseId\", \"public\".\"ExerciseLog\".\"createdAt\", \"public\".\"ExerciseLog\".\"updatedAt\" FROM \"public\".\"ExerciseLog\" WHERE \"public\".\"ExerciseLog\".\"userId\" = $1 ORDER BY \"public\".\"ExerciseLog\".\"date\" DESC LIMIT $2 OFFSET $3"
+[05:55:13.976] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE \"public\".\"Exercise\".\"id\" IN ($1,$2) OFFSET $3"
+[05:55:13.982] Server  WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(85%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[05:55:14.293] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(85%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[05:55:14.293] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(85%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[05:59:23.827] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"name\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"resetToken\", \"public\".\"User\".\"resetTokenExpiry\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE (\"public\".\"User\".\"email\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[05:59:24.094] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"name\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"resetToken\", \"public\".\"User\".\"resetTokenExpiry\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE (\"public\".\"User\".\"email\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[05:59:24.098] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE 1=1 ORDER BY \"public\".\"Exercise\".\"name\" ASC OFFSET $1"
+[05:59:24.102] Server  LOG     prisma:query "SELECT \"public\".\"ExerciseLog\".\"id\", \"public\".\"ExerciseLog\".\"weight\", \"public\".\"ExerciseLog\".\"reps\", \"public\".\"ExerciseLog\".\"sets\", \"public\".\"ExerciseLog\".\"rpe\", \"public\".\"ExerciseLog\".\"estimated1RM\", \"public\".\"ExerciseLog\".\"date\", \"public\".\"ExerciseLog\".\"userId\", \"public\".\"ExerciseLog\".\"exerciseId\", \"public\".\"ExerciseLog\".\"createdAt\", \"public\".\"ExerciseLog\".\"updatedAt\" FROM \"public\".\"ExerciseLog\" WHERE \"public\".\"ExerciseLog\".\"userId\" = $1 ORDER BY \"public\".\"ExerciseLog\".\"date\" DESC LIMIT $2 OFFSET $3"
+[05:59:26.320] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"name\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"resetToken\", \"public\".\"User\".\"resetTokenExpiry\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\", COALESCE(\"aggr_selection_0_ExerciseLog\".\"_aggr_count_logs\", 0) AS \"_aggr_count_logs\" FROM \"public\".\"User\" LEFT JOIN (SELECT \"public\".\"ExerciseLog\".\"userId\", COUNT(*) AS \"_aggr_count_logs\" FROM \"public\".\"ExerciseLog\" WHERE 1=1 GROUP BY \"public\".\"ExerciseLog\".\"userId\") AS \"aggr_selection_0_ExerciseLog\" ON (\"public\".\"User\".\"id\" = \"aggr_selection_0_ExerciseLog\".\"userId\") WHERE 1=1 ORDER BY \"public\".\"User\".\"createdAt\" DESC OFFSET $1"
+[05:59:26.322] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\", COALESCE(\"aggr_selection_0_ExerciseLog\".\"_aggr_count_logs\", 0) AS \"_aggr_count_logs\" FROM \"public\".\"Exercise\" LEFT JOIN (SELECT \"public\".\"ExerciseLog\".\"exerciseId\", COUNT(*) AS \"_aggr_count_logs\" FROM \"public\".\"ExerciseLog\" WHERE 1=1 GROUP BY \"public\".\"ExerciseLog\".\"exerciseId\") AS \"aggr_selection_0_ExerciseLog\" ON (\"public\".\"Exercise\".\"id\" = \"aggr_selection_0_ExerciseLog\".\"exerciseId\") WHERE 1=1 ORDER BY \"public\".\"Exercise\".\"name\" ASC OFFSET $1"
+[05:59:30.181] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"name\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"resetToken\", \"public\".\"User\".\"resetTokenExpiry\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE (\"public\".\"User\".\"id\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[05:59:30.182] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE 1=1 ORDER BY \"public\".\"Exercise\".\"name\" ASC OFFSET $1"
+[05:59:30.183] Server  LOG     prisma:query "SELECT \"public\".\"ExerciseLog\".\"id\", \"public\".\"ExerciseLog\".\"weight\", \"public\".\"ExerciseLog\".\"reps\", \"public\".\"ExerciseLog\".\"sets\", \"public\".\"ExerciseLog\".\"rpe\", \"public\".\"ExerciseLog\".\"estimated1RM\", \"public\".\"ExerciseLog\".\"date\", \"public\".\"ExerciseLog\".\"userId\", \"public\".\"ExerciseLog\".\"exerciseId\", \"public\".\"ExerciseLog\".\"createdAt\", \"public\".\"ExerciseLog\".\"updatedAt\" FROM \"public\".\"ExerciseLog\" WHERE \"public\".\"ExerciseLog\".\"userId\" = $1 ORDER BY \"public\".\"ExerciseLog\".\"date\" DESC LIMIT $2 OFFSET $3"
+[05:59:30.184] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE \"public\".\"Exercise\".\"id\" IN ($1,$2) OFFSET $3"
+[05:59:30.294] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(85%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[05:59:30.294] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(85%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[05:59:58.630] Server  LOG     prisma:query "SELECT 1"
+[05:59:58.632] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"name\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"resetToken\", \"public\".\"User\".\"resetTokenExpiry\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\", COALESCE(\"aggr_selection_0_ExerciseLog\".\"_aggr_count_logs\", 0) AS \"_aggr_count_logs\" FROM \"public\".\"User\" LEFT JOIN (SELECT \"public\".\"ExerciseLog\".\"userId\", COUNT(*) AS \"_aggr_count_logs\" FROM \"public\".\"ExerciseLog\" WHERE 1=1 GROUP BY \"public\".\"ExerciseLog\".\"userId\") AS \"aggr_selection_0_ExerciseLog\" ON (\"public\".\"User\".\"id\" = \"aggr_selection_0_ExerciseLog\".\"userId\") WHERE 1=1 ORDER BY \"public\".\"User\".\"createdAt\" DESC OFFSET $1"
+[05:59:58.633] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\", COALESCE(\"aggr_selection_0_ExerciseLog\".\"_aggr_count_logs\", 0) AS \"_aggr_count_logs\" FROM \"public\".\"Exercise\" LEFT JOIN (SELECT \"public\".\"ExerciseLog\".\"exerciseId\", COUNT(*) AS \"_aggr_count_logs\" FROM \"public\".\"ExerciseLog\" WHERE 1=1 GROUP BY \"public\".\"ExerciseLog\".\"exerciseId\") AS \"aggr_selection_0_ExerciseLog\" ON (\"public\".\"Exercise\".\"id\" = \"aggr_selection_0_ExerciseLog\".\"exerciseId\") WHERE 1=1 ORDER BY \"public\".\"Exercise\".\"name\" ASC OFFSET $1"
+[06:02:04.882] Server  LOG     prisma:query "SELECT 1"
+[06:02:04.884] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"name\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"resetToken\", \"public\".\"User\".\"resetTokenExpiry\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE (\"public\".\"User\".\"email\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[06:02:04.886] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE 1=1 ORDER BY \"public\".\"Exercise\".\"name\" ASC OFFSET $1"
+[06:02:04.888] Server  LOG     prisma:query "SELECT \"public\".\"ExerciseLog\".\"id\", \"public\".\"ExerciseLog\".\"weight\", \"public\".\"ExerciseLog\".\"reps\", \"public\".\"ExerciseLog\".\"sets\", \"public\".\"ExerciseLog\".\"rpe\", \"public\".\"ExerciseLog\".\"estimated1RM\", \"public\".\"ExerciseLog\".\"date\", \"public\".\"ExerciseLog\".\"userId\", \"public\".\"ExerciseLog\".\"exerciseId\", \"public\".\"ExerciseLog\".\"createdAt\", \"public\".\"ExerciseLog\".\"updatedAt\" FROM \"public\".\"ExerciseLog\" WHERE \"public\".\"ExerciseLog\".\"userId\" = $1 ORDER BY \"public\".\"ExerciseLog\".\"date\" DESC LIMIT $2 OFFSET $3"
+[06:02:04.888] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE \"public\".\"Exercise\".\"id\" IN ($1,$2) OFFSET $3"
+[06:02:04.897] Server  WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(85%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[06:02:05.204] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(85%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[06:02:05.204] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(85%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[06:02:05.687] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"name\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"resetToken\", \"public\".\"User\".\"resetTokenExpiry\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE (\"public\".\"User\".\"email\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[06:02:05.688] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE 1=1 ORDER BY \"public\".\"Exercise\".\"name\" ASC OFFSET $1"
+[06:02:05.690] Server  LOG     prisma:query "SELECT \"public\".\"ExerciseLog\".\"id\", \"public\".\"ExerciseLog\".\"weight\", \"public\".\"ExerciseLog\".\"reps\", \"public\".\"ExerciseLog\".\"sets\", \"public\".\"ExerciseLog\".\"rpe\", \"public\".\"ExerciseLog\".\"estimated1RM\", \"public\".\"ExerciseLog\".\"date\", \"public\".\"ExerciseLog\".\"userId\", \"public\".\"ExerciseLog\".\"exerciseId\", \"public\".\"ExerciseLog\".\"createdAt\", \"public\".\"ExerciseLog\".\"updatedAt\" FROM \"public\".\"ExerciseLog\" WHERE \"public\".\"ExerciseLog\".\"userId\" = $1 ORDER BY \"public\".\"ExerciseLog\".\"date\" DESC LIMIT $2 OFFSET $3"
+[06:02:05.691] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE \"public\".\"Exercise\".\"id\" IN ($1,$2) OFFSET $3"
+[06:02:05.699] Server  WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(85%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[06:02:05.901] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(85%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[06:02:05.901] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(85%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[06:02:06.344] Server  LOG     prisma:query "SELECT \"public\".\"User\".\"id\", \"public\".\"User\".\"name\", \"public\".\"User\".\"email\", \"public\".\"User\".\"password\", \"public\".\"User\".\"image\", \"public\".\"User\".\"role\", \"public\".\"User\".\"resetToken\", \"public\".\"User\".\"resetTokenExpiry\", \"public\".\"User\".\"createdAt\", \"public\".\"User\".\"updatedAt\" FROM \"public\".\"User\" WHERE (\"public\".\"User\".\"email\" = $1 AND 1=1) LIMIT $2 OFFSET $3"
+[06:02:06.346] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE 1=1 ORDER BY \"public\".\"Exercise\".\"name\" ASC OFFSET $1"
+[06:02:06.347] Server  LOG     prisma:query "SELECT \"public\".\"ExerciseLog\".\"id\", \"public\".\"ExerciseLog\".\"weight\", \"public\".\"ExerciseLog\".\"reps\", \"public\".\"ExerciseLog\".\"sets\", \"public\".\"ExerciseLog\".\"rpe\", \"public\".\"ExerciseLog\".\"estimated1RM\", \"public\".\"ExerciseLog\".\"date\", \"public\".\"ExerciseLog\".\"userId\", \"public\".\"ExerciseLog\".\"exerciseId\", \"public\".\"ExerciseLog\".\"createdAt\", \"public\".\"ExerciseLog\".\"updatedAt\" FROM \"public\".\"ExerciseLog\" WHERE \"public\".\"ExerciseLog\".\"userId\" = $1 ORDER BY \"public\".\"ExerciseLog\".\"date\" DESC LIMIT $2 OFFSET $3"
+[06:02:06.348] Server  LOG     prisma:query "SELECT \"public\".\"Exercise\".\"id\", \"public\".\"Exercise\".\"name\", \"public\".\"Exercise\".\"description\", \"public\".\"Exercise\".\"category\", \"public\".\"Exercise\".\"createdAt\", \"public\".\"Exercise\".\"updatedAt\" FROM \"public\".\"Exercise\" WHERE \"public\".\"Exercise\".\"id\" IN ($1,$2) OFFSET $3"
+[06:02:06.353] Server  WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(85%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[06:02:06.551] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(85%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[06:02:06.551] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(85%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.

@@ -197,3 +197,42 @@ export async function resetPassword(token: string, formData: FormData) {
 
   redirect("/login?reset=success")
 }
+
+export async function deleteLog(logId: string) {
+  const session = await getServerSession(authOptions)
+  if (!session || !session.user?.email) {
+    return { error: "Unauthorized" }
+  }
+
+  try {
+    const user = await prisma.user.findUnique({
+      where: { email: session.user.email }
+    })
+
+    if (!user) return { error: "User not found" }
+
+    const log = await prisma.exerciseLog.findUnique({
+      where: { id: logId },
+      include: { user: true }
+    })
+
+    if (!log) return { error: "Log not found" }
+
+    // Allow deletion if user owns the log or is an admin
+    if (log.userId !== user.id && user.role !== 'ADMIN') {
+      return { error: "Unauthorized" }
+    }
+
+    await prisma.exerciseLog.delete({
+      where: { id: logId }
+    })
+
+    revalidatePath("/dashboard")
+    revalidatePath("/admin")
+    revalidatePath(`/admin/users/${log.userId}`)
+    return { success: true }
+  } catch (error) {
+    console.error("Failed to delete log:", error)
+    return { error: "Failed to delete log" }
+  }
+}

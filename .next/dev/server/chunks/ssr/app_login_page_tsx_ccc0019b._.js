@@ -71,7 +71,7 @@ function LoginPage() {
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                                 className: "text-4xl font-extrabold tracking-tight heading-gradient mb-2",
-                                children: "Welcome Back"
+                                children: "Bienvenido de Nuevo"
                             }, void 0, false, {
                                 fileName: "[project]/app/login/page.tsx",
                                 lineNumber: 40,
@@ -79,7 +79,7 @@ function LoginPage() {
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                 className: "text-gray-500",
-                                children: "Sign in to continue your progress"
+                                children: "Inicia sesión para continuar tu progreso"
                             }, void 0, false, {
                                 fileName: "[project]/app/login/page.tsx",
                                 lineNumber: 41,
@@ -100,7 +100,7 @@ function LoginPage() {
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
                                         className: "block text-sm font-semibold text-gray-700 ml-1",
-                                        children: "Email Address"
+                                        children: "Correo Electrónico"
                                     }, void 0, false, {
                                         fileName: "[project]/app/login/page.tsx",
                                         lineNumber: 46,
@@ -111,7 +111,7 @@ function LoginPage() {
                                         value: email,
                                         onChange: (e)=>setEmail(e.target.value),
                                         className: "input-field",
-                                        placeholder: "you@example.com",
+                                        placeholder: "tu@ejemplo.com",
                                         required: true
                                     }, void 0, false, {
                                         fileName: "[project]/app/login/page.tsx",
@@ -132,7 +132,7 @@ function LoginPage() {
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
                                                 className: "block text-sm font-semibold text-gray-700 ml-1",
-                                                children: "Password"
+                                                children: "Contraseña"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/login/page.tsx",
                                                 lineNumber: 58,
@@ -141,7 +141,7 @@ function LoginPage() {
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                                 href: "/forgot-password",
                                                 className: "text-xs font-medium text-amber-600 hover:text-amber-700",
-                                                children: "Forgot Password?"
+                                                children: "¿Olvidaste tu contraseña?"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/login/page.tsx",
                                                 lineNumber: 59,
@@ -207,7 +207,7 @@ function LoginPage() {
                                     fileName: "[project]/app/login/page.tsx",
                                     lineNumber: 78,
                                     columnNumber: 15
-                                }, this) : 'Sign In'
+                                }, this) : 'Iniciar Sesión'
                             }, void 0, false, {
                                 fileName: "[project]/app/login/page.tsx",
                                 lineNumber: 72,
@@ -222,11 +222,11 @@ function LoginPage() {
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                         className: "mt-6 text-center text-sm text-gray-600",
                         children: [
-                            "Don't have an account? ",
+                            "¿No tienes una cuenta? ",
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                 href: "/register",
                                 className: "text-primary font-semibold hover:underline",
-                                children: "Create one"
+                                children: "Crea una"
                             }, void 0, false, {
                                 fileName: "[project]/app/login/page.tsx",
                                 lineNumber: 87,

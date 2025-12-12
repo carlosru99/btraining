@@ -1,9 +1,11 @@
 'use client'
 
-import { useState } from "react"
+import { useState, useTransition } from "react"
 import LogExerciseForm from "@/components/LogExerciseForm"
 import ProgressionChart from "@/components/ProgressionChart"
 import PersonalRecords from "@/components/PersonalRecords"
+import { deleteLog } from "@/app/actions"
+import { useRouter } from "next/navigation"
 
 type DashboardClientProps = {
   user: any
@@ -14,6 +16,21 @@ type DashboardClientProps = {
 
 export default function DashboardClient({ user, exercises, logs, isAdminView = false }: DashboardClientProps) {
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const [isPending, startTransition] = useTransition()
+  const router = useRouter()
+
+  const handleDelete = async (logId: string) => {
+    if (!confirm('¿Estás seguro de que quieres borrar este registro?')) return
+
+    startTransition(async () => {
+      const result = await deleteLog(logId)
+      if (result.error) {
+        alert(result.error)
+      } else {
+        router.refresh()
+      }
+    })
+  }
 
   return (
     <div className="space-y-8 relative">
@@ -75,6 +92,7 @@ export default function DashboardClient({ user, exercises, logs, isAdminView = f
                                   <th className="pb-4 font-semibold">Reps</th>
                                   <th className="pb-4 font-semibold">Series</th>
                                   <th className="pb-4 font-semibold">1RM Est.</th>
+                                  <th className="pb-4 font-semibold">Acciones</th>
                               </tr>
                           </thead>
                           <tbody className="divide-y divide-gray-50">
@@ -93,6 +111,16 @@ export default function DashboardClient({ user, exercises, logs, isAdminView = f
                                         ) : (
                                           <span className="text-gray-300">-</span>
                                         )}
+                                      </td>
+                                      <td className="py-4">
+                                        <button
+                                          onClick={() => handleDelete(log.id)}
+                                          disabled={isPending}
+                                          className="text-red-400 hover:text-red-600 transition-colors p-1 rounded-md hover:bg-red-50"
+                                          title="Borrar registro"
+                                        >
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+                                        </button>
                                       </td>
                                   </tr>
                               ))}
