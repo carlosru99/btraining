@@ -1,9 +1,11 @@
 {
+  "/_not-found/page": "app/_not-found/page.js",
   "/admin/page": "app/admin/page.js",
-  "/admin/users/[id]/page": "app/admin/users/[id]/page.js",
   "/api/auth/[...nextauth]/route": "app/api/auth/[...nextauth]/route.js",
+  "/dashboard/client/[id]/page": "app/dashboard/client/[id]/page.js",
   "/dashboard/page": "app/dashboard/page.js",
   "/exercises/page": "app/exercises/page.js",
   "/login/page": "app/login/page.js",
-  "/page": "app/page.js"
+  "/page": "app/page.js",
+  "/register/page": "app/register/page.js"
 }

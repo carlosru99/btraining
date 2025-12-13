@@ -67,19 +67,19 @@ export default async function AdminDashboard() {
             <table className="min-w-full text-left text-sm">
               <thead>
                 <tr className="border-b border-gray-100 text-gray-400 uppercase tracking-wider text-xs">
-                  <th className="pb-4 font-semibold pl-2">Nombre</th>
-                  <th className="pb-4 font-semibold">Email</th>
-                  <th className="pb-4 font-semibold">Clientes</th>
-                  <th className="pb-4 font-semibold text-center">Acción</th>
+                  <th className="pb-4 font-semibold pl-2 whitespace-nowrap">Nombre</th>
+                  <th className="pb-4 font-semibold whitespace-nowrap">Email</th>
+                  <th className="pb-4 font-semibold whitespace-nowrap">Clientes</th>
+                  <th className="pb-4 font-semibold text-center whitespace-nowrap">Acción</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-50">
                 {trainers.map((trainer: any) => (
                   <tr key={trainer.id} className="hover:bg-gray-50/50 transition-colors">
-                    <td className="py-4 pl-2 font-medium text-gray-900">{trainer.name || 'N/A'}</td>
-                    <td className="py-4 text-gray-600">{trainer.email || 'Pendiente'}</td>
-                    <td className="py-4 text-gray-600">{trainer._count.clients}</td>
-                    <td className="py-4">
+                    <td className="py-4 pl-2 font-medium text-gray-900 whitespace-nowrap">{trainer.name || 'N/A'}</td>
+                    <td className="py-4 text-gray-600 whitespace-nowrap">{trainer.email || 'Pendiente'}</td>
+                    <td className="py-4 text-gray-600 whitespace-nowrap">{trainer._count.clients}</td>
+                    <td className="py-4 whitespace-nowrap">
                         <div className="flex items-center justify-center gap-2">
                             <form action={deleteUser.bind(null, trainer.id)}>
                               <button className="text-red-500 hover:text-red-700 text-xs font-medium bg-red-50 hover:bg-red-100 px-3 py-2 rounded-xl transition-colors border border-red-100">Eliminar</button>
@@ -103,19 +103,19 @@ export default async function AdminDashboard() {
             <table className="min-w-full text-left text-sm">
               <thead>
                 <tr className="border-b border-gray-100 text-gray-400 uppercase tracking-wider text-xs">
-                  <th className="pb-4 font-semibold pl-2">Nombre</th>
-                  <th className="pb-4 font-semibold">Entrenador</th>
-                  <th className="pb-4 font-semibold">Registros</th>
-                  <th className="pb-4 font-semibold text-center">Acción</th>
+                  <th className="pb-4 font-semibold pl-2 whitespace-nowrap">Nombre</th>
+                  <th className="pb-4 font-semibold whitespace-nowrap">Entrenador</th>
+                  <th className="pb-4 font-semibold whitespace-nowrap">Registros</th>
+                  <th className="pb-4 font-semibold text-center whitespace-nowrap">Acción</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-50">
                 {clients.map((client: any) => (
                   <tr key={client.id} className="hover:bg-gray-50/50 transition-colors">
-                    <td className="py-4 pl-2 font-medium text-gray-900">{client.name || 'N/A'}</td>
-                    <td className="py-4 text-gray-600">{client.trainer?.name || 'Sin asignar'}</td>
-                    <td className="py-4 text-gray-600">{client._count.logs}</td>
-                    <td className="py-4">
+                    <td className="py-4 pl-2 font-medium text-gray-900 whitespace-nowrap">{client.name || 'N/A'}</td>
+                    <td className="py-4 text-gray-600 whitespace-nowrap">{client.trainer?.name || 'Sin asignar'}</td>
+                    <td className="py-4 text-gray-600 whitespace-nowrap">{client._count.logs}</td>
+                    <td className="py-4 whitespace-nowrap">
                         <div className="flex items-center justify-center gap-2">
                           <Link 
                             href={`/admin/users/${client.id}`}
@@ -145,19 +145,19 @@ export default async function AdminDashboard() {
             <table className="min-w-full text-left text-sm">
               <thead>
                 <tr className="border-b border-gray-100 text-gray-400 uppercase tracking-wider text-xs">
-                  <th className="pb-4 font-semibold pl-2">Nombre</th>
-                  <th className="pb-4 font-semibold">Categoría</th>
-                  <th className="pb-4 font-semibold">Uso</th>
-                  <th className="pb-4 font-semibold">Acción</th>
+                  <th className="pb-4 font-semibold pl-2 whitespace-nowrap">Nombre</th>
+                  <th className="pb-4 font-semibold whitespace-nowrap">Categoría</th>
+                  <th className="pb-4 font-semibold whitespace-nowrap">Uso</th>
+                  <th className="pb-4 font-semibold whitespace-nowrap">Acción</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-50">
                 {exercises.map((ex: any) => (
                   <tr key={ex.id} className="hover:bg-gray-50/50 transition-colors">
-                    <td className="py-4 pl-2 font-medium text-gray-900">{ex.name}</td>
-                    <td className="py-4 text-gray-600">{ex.category}</td>
-                    <td className="py-4 text-gray-600">{ex._count.logs} registros</td>
-                    <td className="py-4">
+                    <td className="py-4 pl-2 font-medium text-gray-900 whitespace-nowrap">{ex.name}</td>
+                    <td className="py-4 text-gray-600 whitespace-nowrap">{ex.category}</td>
+                    <td className="py-4 text-gray-600 whitespace-nowrap">{ex._count.logs} registros</td>
+                    <td className="py-4 whitespace-nowrap">
                       <form action={deleteExercise.bind(null, ex.id)}>
                         <button className="text-red-500 hover:text-red-700 text-xs font-medium bg-red-50 hover:bg-red-100 px-3 py-1 rounded-md transition-colors">Eliminar</button>
                       </form>

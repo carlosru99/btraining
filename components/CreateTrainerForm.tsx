@@ -35,7 +35,7 @@ export default function CreateTrainerForm() {
             className="input-field w-full"
           />
         </div>
-        <button type="submit" className="btn-primary whitespace-nowrap h-[42px]">
+        <button type="submit" className="btn-primary whitespace-nowrap py-5 mb-1">
           Generar Invitación
         </button>
       </form>

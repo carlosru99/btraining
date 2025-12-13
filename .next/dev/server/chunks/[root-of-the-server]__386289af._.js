@@ -168,6 +168,16 @@ const authOptions = {
                     console.log("User not found:", credentials.email);
                     return null;
                 }
+                // Only ADMIN and TRAINER can log in
+                if (user.role === 'CLIENT') {
+                    console.log("Client login attempt denied:", credentials.email);
+                    return null;
+                }
+                // If user has no password (e.g. invited user who hasn't claimed account), deny login
+                if (!user.password) {
+                    console.log("User has no password set:", credentials.email);
+                    return null;
+                }
                 const isPasswordValid = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$bcryptjs$2f$index$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["compare"])(credentials.password, user.password);
                 if (!isPasswordValid) {
                     console.log("Invalid password for user:", credentials.email);

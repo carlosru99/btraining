@@ -1,5 +1,6 @@
 'use client'
 import Link from 'next/link'
+import Image from 'next/image'
 import { useSession, signOut } from 'next-auth/react'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
@@ -10,15 +11,23 @@ export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   const isActive = (path: string) => pathname === path 
-    ? "bg-amber-50 text-amber-600 px-4 py-2 rounded-xl font-semibold transition-all block" 
-    : "text-gray-600 hover:text-gray-900 hover:bg-gray-50 px-4 py-2 rounded-xl transition-all block"
+    ? "bg-gray-800 text-white px-4 py-2 rounded-xl font-semibold transition-all block" 
+    : "text-gray-300 hover:text-white hover:bg-gray-800 px-4 py-2 rounded-xl transition-all block"
 
   return (
     <div className="sticky top-4 z-50 px-4 mb-8">
-      <nav className="glass-panel mx-auto max-w-7xl rounded-2xl px-6 min-h-[5rem] flex flex-col justify-center transition-all duration-300 hover:shadow-2xl relative">
+      <nav className="bg-[#111827]/95 backdrop-blur-md border border-gray-800 shadow-2xl shadow-black/20 mx-auto max-w-7xl rounded-2xl px-6 min-h-[5rem] flex flex-col justify-center transition-all duration-300 hover:shadow-black/30 relative">
         <div className="flex justify-between items-center w-full h-20">
-          <Link href="/" className="text-2xl font-bold tracking-tight text-gray-900 flex items-center gap-2">
-            <span className="text-amber-600">B</span>Training
+          <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+            <Image 
+              src="/logo_btraining.png" 
+              alt="BTraining Logo" 
+              width={180} 
+              height={50} 
+              className="h-12 w-auto object-contain"
+              priority
+              unoptimized
+            />
           </Link>
           
           {/* Desktop Menu */}
@@ -31,10 +40,10 @@ export default function Navbar() {
                   <Link href="/admin" className={isActive('/admin')}>Admin</Link>
                 )}
                 <div className="flex items-center gap-4 ml-4">
-                  <span className="text-sm text-gray-500">{session.user?.name || session.user?.email}</span>
+                  <span className="text-sm text-gray-400">{session.user?.name || session.user?.email}</span>
                   <button 
                     onClick={() => signOut()} 
-                    className="text-sm font-medium text-red-500 hover:text-red-600 transition-colors"
+                    className="text-sm font-medium text-red-400 hover:text-red-300 transition-colors"
                   >
                     Salir
                   </button>
@@ -42,7 +51,7 @@ export default function Navbar() {
               </>
             ) : (
               <div className="flex items-center gap-4">
-                <Link href="/login" className="text-gray-600 hover:text-primary font-medium transition-colors">Entrar</Link>
+                <Link href="/login" className="text-gray-300 hover:text-white font-medium transition-colors">Entrar</Link>
                 <Link href="/register" className="btn-primary">
                   Empezar
                 </Link>
@@ -52,7 +61,7 @@ export default function Navbar() {
 
           {/* Mobile Menu Button */}
           <button 
-            className="md:hidden p-2 text-gray-600 hover:text-gray-900 focus:outline-none"
+            className="md:hidden p-2 text-gray-300 hover:text-white focus:outline-none"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? (
@@ -69,7 +78,7 @@ export default function Navbar() {
 
         {/* Mobile Menu Dropdown */}
         {isMobileMenuOpen && (
-          <div className="md:hidden pb-6 pt-2 border-t border-gray-100 animate-in slide-in-from-top-5 fade-in duration-200">
+          <div className="md:hidden pb-6 pt-2 border-t border-gray-800 animate-in slide-in-from-top-5 fade-in duration-200">
             <div className="flex flex-col space-y-2">
               {session ? (
                 <>

@@ -8,8 +8,8 @@
           "exportedName": "deleteLog",
           "filename": "app/actions.ts"
         },
-        "app/admin/users/[id]/page": {
-          "moduleId": "[project]/.next-internal/server/app/admin/users/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+        "app/dashboard/client/[id]/page": {
+          "moduleId": "[project]/.next-internal/server/app/dashboard/client/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false,
           "exportedName": "deleteLog",
           "filename": "app/actions.ts"
@@ -23,11 +23,33 @@
       },
       "layer": {
         "app/admin/page": "rsc",
-        "app/admin/users/[id]/page": "action-browser",
+        "app/dashboard/client/[id]/page": "action-browser",
         "app/dashboard/page": "action-browser"
       },
       "filename": "app/actions.ts",
       "exportedName": "deleteLog"
+    },
+    "4010449c7771168844430a6aac49f99bc34aa114a7": {
+      "workers": {
+        "app/admin/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "createClient",
+          "filename": "app/actions.ts"
+        },
+        "app/dashboard/page": {
+          "moduleId": "[project]/.next-internal/server/app/dashboard/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "createClient",
+          "filename": "app/actions.ts"
+        }
+      },
+      "layer": {
+        "app/admin/page": "rsc",
+        "app/dashboard/page": "action-browser"
+      },
+      "filename": "app/actions.ts",
+      "exportedName": "createClient"
     },
     "408897ea7a0b8912ec7d0cb55c9f980527fddccca9": {
       "workers": {
@@ -37,8 +59,8 @@
           "exportedName": "logExercise",
           "filename": "app/actions.ts"
         },
-        "app/admin/users/[id]/page": {
-          "moduleId": "[project]/.next-internal/server/app/admin/users/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+        "app/dashboard/client/[id]/page": {
+          "moduleId": "[project]/.next-internal/server/app/dashboard/client/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false,
           "exportedName": "logExercise",
           "filename": "app/actions.ts"
@@ -52,7 +74,7 @@
       },
       "layer": {
         "app/admin/page": "rsc",
-        "app/admin/users/[id]/page": "action-browser",
+        "app/dashboard/client/[id]/page": "action-browser",
         "app/dashboard/page": "action-browser"
       },
       "filename": "app/actions.ts",
@@ -102,10 +124,17 @@
           "async": false,
           "exportedName": "registerUser",
           "filename": "app/actions.ts"
+        },
+        "app/register/page": {
+          "moduleId": "[project]/.next-internal/server/app/register/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "registerUser",
+          "filename": "app/actions.ts"
         }
       },
       "layer": {
-        "app/admin/page": "rsc"
+        "app/admin/page": "rsc",
+        "app/register/page": "action-browser"
       },
       "filename": "app/actions.ts",
       "exportedName": "registerUser"
@@ -124,6 +153,21 @@
       },
       "filename": "app/actions.ts",
       "exportedName": "deleteExercise"
+    },
+    "40dac2cb1d104064971d6310f3b3ae061a15bd5b3f": {
+      "workers": {
+        "app/admin/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "createTrainer",
+          "filename": "app/actions.ts"
+        }
+      },
+      "layer": {
+        "app/admin/page": "action-browser"
+      },
+      "filename": "app/actions.ts",
+      "exportedName": "createTrainer"
     },
     "40fe90a2056c4f2ba0b627bd60286f1d37da30be2e": {
       "workers": {
